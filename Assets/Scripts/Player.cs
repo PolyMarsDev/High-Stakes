@@ -8,4 +8,6 @@ public class Player : MonoBehaviour {
 		if (mvmt.x == 0 || mvmt.y == 0)
 			transform.Translate(new Vector3(mvmt.x, 0, mvmt.y));
 	}
+
+	
 }
