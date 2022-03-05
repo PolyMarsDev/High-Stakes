@@ -33,10 +33,10 @@ public class Enemy : MonoBehaviour {
 
     //  When the user presses Ctrl, it will remove the script 
     //  named FooScript from the game object
-     public void Update (InputValue input) {
-         if (Input.GetButton ("Fire1") && GetComponent (FooScript))
-            //  Destroy (GetComponent (FooScript));
-            Console.WriteLine("This is C#");
-			this.die(input);
-     }
+    //  public void Update (InputValue input) {
+    //      if (Input.GetButton ("Fire1") && GetComponent (FooScript))
+    //         //  Destroy (GetComponent (FooScript));
+    //         Console.WriteLine("This is C#");
+	// 		this.die(input);
+    //  }
 }
