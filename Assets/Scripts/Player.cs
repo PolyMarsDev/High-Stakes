@@ -59,4 +59,6 @@ public class Player : MonoBehaviour {
         //     lr.SetPosition(1,specialDestinations[i]);
 		// }
 	}
+
+	
 }
