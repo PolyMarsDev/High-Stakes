@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: doorway_mat
-  m_Shader: {fileID: -6465566751694194690, guid: f12218a205e394c44a3b6084a6f50a79, type: 3}
+  m_Name: water_mat
+  m_Shader: {fileID: -6465566751694194690, guid: 717ad50d606a8437fac0debc90a7438e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,9 +32,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_f905a9491dd9483e9c9cbc994aa7bc4b: -1.94
-    - _ColorRange: 0
-    - _FogDensity: 0.414
+    - Vector1_2978CB76: 0.26
+    - Vector1_5D081BA7: 1.01
     m_Colors:
-    - _FogColor: {r: 1, g: 0.48415402, b: 0.3915094, a: 0.8313726}
+    - Color_8648BF0: {r: 0.25759926, g: 1.238188, b: 1.7616467, a: 0}
+    - Vector2_2BA8FDAC: {r: 0, g: 0.2, b: 0, a: 0}
+    - Vector2_34DB332F: {r: 4.58, g: 0.92, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: doorway_mat
-  m_Shader: {fileID: -6465566751694194690, guid: f12218a205e394c44a3b6084a6f50a79, type: 3}
+  m_Name: fire_mat
+  m_Shader: {fileID: -6465566751694194690, guid: 2f31c2487e66342d4bd02010c2bbf0fc, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,9 +32,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_f905a9491dd9483e9c9cbc994aa7bc4b: -1.94
-    - _ColorRange: 0
-    - _FogDensity: 0.414
+    - Vector1_2ec383a24afd49f78ab6d683d95d03a4: 0.1
+    - Vector1_31badfa2f2494f13aff08b4daa9763c2: 0.44
+    - Vector1_43257789a71e44a490928ec34b6b3066: 2
+    - Vector1_61d549c5cfda4caf869442843b4904b9: 0
     m_Colors:
-    - _FogColor: {r: 1, g: 0.48415402, b: 0.3915094, a: 0.8313726}
+    - Color_796fe05f9a4946b19ad3ef1d62d86ca7: {r: 0.5591953, g: 0, b: 2.6701574, a: 0}
+    - Vector2_18dbb32e20f5447cad0bd48524f87547: {r: 2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
