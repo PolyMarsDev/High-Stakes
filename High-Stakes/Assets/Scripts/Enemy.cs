@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class Enemy : MonoBehaviour, Unit{
+public abstract class Enemy : Unit {
     public Tilemap tilemap;
 	public TileBase testTile;
 	// public void OnMovement(InputValue value) {
@@ -42,19 +42,19 @@ public class Enemy : MonoBehaviour, Unit{
         // Removes the rigidbody from the game object
         Destroy(GetComponent<Rigidbody>());
 	}
-    //     // Kills the game object in 5 seconds after loading the object
-    //     // Destroy (gameObject, 5);
-    //     // When the user presses Ctrl, it will remove the script 
-    //     // named FooScript from the game object
-    // }
+	//     // Kills the game object in 5 seconds after loading the object
+	//     // Destroy (gameObject, 5);
+	//     // When the user presses Ctrl, it will remove the script 
+	//     // named FooScript from the game object
+	// }
 
 
-    //  When the user presses Ctrl, it will remove the script 
-    //  named FooScript from the game object
-    //  public void Update (InputValue input) {
-    //      if (Input.GetButton ("Fire1") && GetComponent (FooScript))
-    //         //  Destroy (GetComponent (FooScript));
-    //         Console.WriteLine("This is C#");
+	//  When the user presses Ctrl, it will remove the script 
+	//  named FooScript from the game object
+	//  public void Update (InputValue input) {
+	//      if (Input.GetButton ("Fire1") && GetComponent (FooScript))
+	//         //  Destroy (GetComponent (FooScript));
+	//         Console.WriteLine("This is C#");
 	// 		this.die(input);
-    //  }
+	//  }
 }
