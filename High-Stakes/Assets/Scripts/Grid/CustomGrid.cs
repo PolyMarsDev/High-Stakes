@@ -26,6 +26,9 @@ public class CustomGrid : MonoBehaviour {
 	public bool CanMoveTo(int x, int y) => ValidSquare(x,y); // for now
 	public bool CanMoveTo(Vector2Int pos) => ValidSquare(pos);
 
+	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && !HasUnitAt(x, y); // TODO: Change after implementing obstacles;
+	public bool CanSeeThrough(Vector2Int pos) => CanSeeThrough(pos.x, pos.y);
+
 	public bool HasUnitAt(int x, int y) => ValidSquare(x, y) ? units[x,y] : false;
 	public bool HasUnitAt(Vector2Int pos) => HasUnitAt(pos.x, pos.y);
 

@@ -8,6 +8,11 @@ using System.Collections.Generic;
 public class GridUI : MonoBehaviour
 {
     public Tilemap UIGrid;
+	public static GridUI Instance;
+
+	void Awake() {
+		Instance = this;
+	}
 
     public void addIndicator(TileBase tile, Vector2Int pos) 
     {
