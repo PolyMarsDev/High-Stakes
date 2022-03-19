@@ -1,0 +1,33 @@
+{
+    "name": "Custom Grid Testing",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "a0482453-1e8a-4ed8-b075-e95b94a4617c",
+            "actions": [
+                {
+                    "name": "MouseDown",
+                    "type": "Button",
+                    "id": "c745feb4-3569-4fcf-bad2-2b1483e835a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cd517606-3aff-4133-9c75-bf6421ab3d60",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
