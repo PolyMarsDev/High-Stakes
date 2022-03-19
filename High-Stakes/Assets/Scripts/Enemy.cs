@@ -1,8 +1,12 @@
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour {
+    public Tilemap tilemap;
+	public TileBase testTile;
 	// public void OnMovement(InputValue value) {
 	// 	Vector2 mvmt = value.Get<Vector2>();
 	// 	if (mvmt.x == 0 || mvmt.y == 0)
@@ -15,6 +19,20 @@ public class Enemy : MonoBehaviour {
 	// // 	if (mvmt.x == 0 || mvmt.y == 0)
 	// // 		transform.Translate(new Vector3(mvmt.x, 0, mvmt.y));
 	// // }
+    
+
+    public void OnMovement(InputValue value) {
+		Vector2 mvmt = value.Get<Vector2>();
+		if (mvmt.x == 0 || mvmt.y == 0) {
+			Vector3Int nextPosition = tilemap.WorldToCell(new Vector3(transform.position.x + mvmt.x, 0, transform.position.z + mvmt.y));
+			//tilemap.SetTile(nextPosition, testTile);
+			if (tilemap.GetTile(nextPosition) != null) {
+				transform.Translate(new Vector3(mvmt.x, 0, mvmt.y));
+                // this.die(value);
+			}
+		}
+		//setSpecialDestinations();
+	}
 
     public void die(InputValue value) {
         // Kills the game object
