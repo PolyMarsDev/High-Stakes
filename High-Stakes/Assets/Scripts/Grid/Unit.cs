@@ -24,7 +24,12 @@ public class Unit : MonoBehaviour {
 
 	public virtual IEnumerator Capture(Unit unit) {
 		transform.position = CustomGrid.Instance.GridToWorld((Vector3Int) pos);
-		Destroy(unit.gameObject);
+		// Kills the game obsject
+        Destroy (unit.gameObject);
+        // Removes this script instance from the game object
+        Destroy (this);
+        // Removes the rigidbody from the game object
+        Destroy(GetComponent<Rigidbody>());
 		yield return null;
 	}
 }
