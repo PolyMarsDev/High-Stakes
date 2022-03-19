@@ -11,11 +11,11 @@ public class GridUI : MonoBehaviour
 
     public void addIndicator(TileBase tile, Vector2Int pos) 
     {
-        UIGrid.SetTile(new Vector3Int(pos.x, 0, pos.y), tile);
+        UIGrid.SetTile(new Vector3Int(pos.x, pos.y, 0), tile);
     }
 
     public void removeIndicator(Vector2Int pos) 
     {
-        UIGrid.SetTile(new Vector3Int(pos.x, 0, pos.y), null);
+        UIGrid.SetTile(new Vector3Int(pos.x, pos.y, 0), null);
     }
 }
