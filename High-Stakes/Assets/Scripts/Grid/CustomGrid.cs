@@ -9,6 +9,7 @@ public class CustomGrid : MonoBehaviour {
 	public static CustomGrid Instance;
 	public Tilemap groundGrid;
 	public Vector2Int Size;
+	public float YplaneOffset = 1f;
 	Unit[,] units;
 
 	// Prioritized being called before anything else
@@ -47,9 +48,8 @@ public class CustomGrid : MonoBehaviour {
 		if (!ValidSquare(dest)) throw new Exception(dest + " not in range of grid of size" + Size);
 
 		Unit unit = GetUnitAt(src);
-		if (unit == null) {
+		if (unit == null)
 			yield break;
-		}
 		if (HasUnitAt(dest)) yield return StartCoroutine(unit.Capture(GetUnitAt(dest)));
 		else yield return StartCoroutine(unit.MoveTo(dest));
 
@@ -62,7 +62,7 @@ public class CustomGrid : MonoBehaviour {
 	public Vector3 GetMouseWorldPosition() {
 		Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 		Plane plane = new Plane();
-		plane.SetNormalAndPosition(Vector3.up, transform.position);
+		plane.SetNormalAndPosition(Vector3.up, transform.position + Vector3.up * YplaneOffset);
 		float dist;
 		if (plane.Raycast(ray, out dist)) {
 			Vector3 hitPoint = ray.GetPoint(dist);
@@ -78,6 +78,6 @@ public class CustomGrid : MonoBehaviour {
 	}
 
 	public Vector3 GridToWorld(Vector3Int pos) {
-		return groundGrid.CellToWorld(pos);
+		return groundGrid.CellToWorld(pos) + Vector3.up * YplaneOffset + Vector3.forward * .5f + Vector3.right * .5f;
 	}
 }
