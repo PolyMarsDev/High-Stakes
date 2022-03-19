@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Player : Unit {
 
-	public override List<Vector2Int> GetAdjacent() {
+	public override List<Vector2Int> GetMoveTo() {
 		int[] dx = {1, -1, 0, 0};
 		int[] dy = {0, 0, -1, 1};
 

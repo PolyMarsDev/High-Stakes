@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour, Unit{
     public Tilemap tilemap;
 	public TileBase testTile;
 	// public void OnMovement(InputValue value) {
