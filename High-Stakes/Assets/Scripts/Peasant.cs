@@ -35,7 +35,8 @@ public class Peasant : Enemy {
 	public override Vector2Int GetBestMove() {
 		if (CanSeePlayer()) {
 			if (CanAttackPlayer()) return Grid.Player.pos;
-			return GetDelta(Grid.Player.pos - pos) + pos;
+			Vector2Int desiredPosition = GetDelta(Grid.Player.pos - pos) + pos;
+			if (Grid.CanMoveTo(desiredPosition) && !HasEnemy(desiredPosition)) return desiredPosition;
 		}
 		return pos;
 	}

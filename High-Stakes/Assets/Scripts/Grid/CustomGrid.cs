@@ -30,10 +30,10 @@ public class CustomGrid : MonoBehaviour {
 	public bool ValidSquare(Vector2Int pos) => ValidSquare(pos.x, pos.y);
 
 	public bool CanMoveTo(int x, int y) => ValidSquare(x,y) && !(units[x, y] is Obstacle); // for now
-	public bool CanMoveTo(Vector2Int pos) => ValidSquare(pos);
+	public bool CanMoveTo(Vector2Int pos) => ValidSquare(pos) && (!GetUnitAt(pos) || !(GetUnitAt(pos) is Obstacle));
 
 	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && !HasUnitAt(x, y) 
-		|| (GetUnitAt(x,y) is Obstacle) && (GetUnitAt(x,y) as Obstacle).Transparent; // TODO: Change after implementing obstacles;
+		|| (GetUnitAt(x,y) is Obstacle) && (GetUnitAt(x,y) as Obstacle).IsTransparent; // TODO: Change after implementing obstacles;
 	public bool CanSeeThrough(Vector2Int pos) => CanSeeThrough(pos.x, pos.y);
 
 	public bool HasUnitAt(int x, int y) => ValidSquare(x, y) ? units[x,y] : false;
