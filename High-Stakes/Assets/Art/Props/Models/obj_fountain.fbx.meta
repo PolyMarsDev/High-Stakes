@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 76939528a732b412297f6bb703fae39b
+guid: 5a9ecb288d1cd4e60aaf496a5460b68c
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21202
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: leavesB
-    second: {fileID: 2100000, guid: a90b4f5da5ca543ea863ad0fb5651468, type: 2}
+      name: prop_mat
+    second: {fileID: 2100000, guid: 927d9c055c347480c9c82d7f8ae3b73b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: still
-    second: {fileID: 2100000, guid: aefe787d96d3243c5b024c952163417c, type: 2}
+      name: water_mat
+    second: {fileID: 2100000, guid: 18c13c29291e54301a0550cdcfc50689, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -24,6 +24,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -53,6 +54,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -64,6 +66,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 0
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

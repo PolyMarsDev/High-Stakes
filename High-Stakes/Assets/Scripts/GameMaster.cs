@@ -13,6 +13,10 @@ public class GameMaster : MonoBehaviour {
 	Player player;
 	public int blood;
 
+	[Range(0, 3)]
+	public int KeysRequired;
+	public int Keys {get; private set; }
+
 	void Awake() {
 		player = FindObjectOfType<Player>();
 		if (!player) throw new System.Exception("GameMaster: There's no player in this scene. What's my purpose then?");
@@ -28,13 +32,17 @@ public class GameMaster : MonoBehaviour {
 
 		// Run some initialization code
 		state = State.PLAYER_TURN;
+		Keys = 0;
 
-		while (CustomGrid.Instance.Player) {
+		while (CustomGrid.Instance.Player && !WinConditionSatisfied()) {
 			if (state == State.PLAYER_TURN) 		yield return _PlayerTurn();
 			else if (state == State.ENEMY_TURN)		yield return _EnemyTurn();
 			state = State.PLAYER_TURN == state ? State.ENEMY_TURN : State.PLAYER_TURN;
 		}
 	}
+
+	public bool WinConditionSatisfied() => Keys == KeysRequired && CustomGrid.Instance.Door && CustomGrid.Instance.Player 
+		&& player.pos == CustomGrid.Instance.Door.pos;
 
 	bool _moveSelected = false;
 	bool _specialMove = false;
@@ -94,7 +102,6 @@ public class GameMaster : MonoBehaviour {
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.removeIndicator(pos);
 	}
-
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
 		foreach (Enemy enemy in Enemies) {

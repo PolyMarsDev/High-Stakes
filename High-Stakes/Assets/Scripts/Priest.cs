@@ -33,7 +33,9 @@ public class Priest : Enemy {
 		if (CanSeePlayer()) {
 			if (CanAttackPlayer()) return Grid.Player.pos;
 			Vector2Int displacement = Grid.Player.pos - pos;
-			return displacement / Mathf.Abs(displacement.x) + pos;
+			Vector2Int desiredPosition = displacement / Mathf.Abs(displacement.x) + pos;
+			if (Grid.CanMoveTo(desiredPosition) && !HasEnemy(desiredPosition)) 
+				return desiredPosition;
 		}
 		return pos;
 	}
