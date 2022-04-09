@@ -12,6 +12,9 @@ public class CustomGrid : MonoBehaviour {
 	public float YplaneOffset = 1f;
 	Unit[,] units;
 
+	public Player Player {get; private set; }
+	public List<Enemy> Enemies {get; private set; }
+
 	// Prioritized being called before anything else
 	void Awake() {
 		units = new Unit[Size.x, Size.y];
@@ -19,12 +22,14 @@ public class CustomGrid : MonoBehaviour {
 		for (int j = 0; j < Size.y; j++)
 			units[i,j] = null;
 		Instance = this;
+		Enemies = new List<Enemy>();
+		Player = null;
 	}
 
 	public bool ValidSquare(int x, int y) => (x >= 0 && x < Size.x && y >= 0 && y < Size.y);
 	public bool ValidSquare(Vector2Int pos) => ValidSquare(pos.x, pos.y);
 
-	public bool CanMoveTo(int x, int y) => ValidSquare(x,y); // for now
+	public bool CanMoveTo(int x, int y) => ValidSquare(x,y) && !(units[x, y] is Obstacle); // for now
 	public bool CanMoveTo(Vector2Int pos) => ValidSquare(pos);
 
 	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && !HasUnitAt(x, y); // TODO: Change after implementing obstacles;
@@ -37,10 +42,20 @@ public class CustomGrid : MonoBehaviour {
 	public Unit GetUnitAt(Vector2Int pos) => GetUnitAt(pos.x, pos.y);
 
 	public void AddUnit(Vector2Int pos, Unit unit) {
+		if (unit is Player) Player = unit as Player;
+		if (unit is Enemy) Enemies.Add(unit as Enemy);
+
 		if (!ValidSquare(pos)) throw new Exception(pos + " not in range of grid of size" + Size);
 		units[pos.x, pos.y] = unit;
 	}
-	public void RemoveUnit(Vector2Int pos) => units[pos.x, pos.y] = null;
+	public void RemoveUnit(Vector2Int pos) {
+		Debug.Log("HI " + pos);
+		if (units[pos.x, pos.y] is Enemy) 
+			Enemies.Remove(units[pos.x, pos.y] as Enemy);
+		if (units[pos.x, pos.y] is Player) 
+			Player = null;
+		units[pos.x, pos.y] = null;
+	} 
 	public void RemoveUnit(Unit unit) => RemoveUnit(unit.pos);
 
 	public IEnumerator MoveUnit(Vector2Int src, Vector2Int dest) {

@@ -5,8 +5,12 @@ using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
 public abstract class Enemy : Unit {
-    public Tilemap tilemap;
-	public TileBase testTile;
+	public abstract bool CanSeePlayer();
+	public abstract bool CanAttackPlayer();
+	public abstract Vector2Int GetBestMove();
+
+    // public Tilemap tilemap;
+	// public TileBase testTile;
 	// public void OnMovement(InputValue value) {
 	// 	Vector2 mvmt = value.Get<Vector2>();
 	// 	if (mvmt.x == 0 || mvmt.y == 0)
@@ -21,18 +25,19 @@ public abstract class Enemy : Unit {
 	// // }
     
 
-    public void OnMovement(InputValue value) {
-		Vector2 mvmt = value.Get<Vector2>();
-		if (mvmt.x == 0 || mvmt.y == 0) {
-			Vector3Int nextPosition = tilemap.WorldToCell(new Vector3(transform.position.x + mvmt.x, 0, transform.position.z + mvmt.y));
-			//tilemap.SetTile(nextPosition, testTile);
-			if (tilemap.GetTile(nextPosition) != null) {
-				transform.Translate(new Vector3(mvmt.x, 0, mvmt.y));
-                // this.die(value);
-			}
-		}
-		//setSpecialDestinations();
-	}
+// Nani?
+    // public void OnMovement(InputValue value) {
+	// 	Vector2 mvmt = value.Get<Vector2>();
+	// 	if (mvmt.x == 0 || mvmt.y == 0) {
+	// 		Vector3Int nextPosition = tilemap.WorldToCell(new Vector3(transform.position.x + mvmt.x, 0, transform.position.z + mvmt.y));
+	// 		//tilemap.SetTile(nextPosition, testTile);
+	// 		if (tilemap.GetTile(nextPosition) != null) {
+	// 			transform.Translate(new Vector3(mvmt.x, 0, mvmt.y));
+    //             // this.die(value);
+	// 		}
+	// 	}
+	// 	//setSpecialDestinations();
+	// }
 
     public void die(InputValue value) {
         // Kills the game object

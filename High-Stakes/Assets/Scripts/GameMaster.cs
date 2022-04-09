@@ -29,7 +29,7 @@ public class GameMaster : MonoBehaviour {
 
 		state = State.PLAYER_TURN;
 
-		while (true) {
+		while (CustomGrid.Instance.Player) {
 			if (state == State.PLAYER_TURN) 		yield return _PlayerTurn();
 			else if (state == State.ENEMY_TURN)		yield return _EnemyTurn();
 			state = State.PLAYER_TURN == state ? State.ENEMY_TURN : State.PLAYER_TURN;
@@ -43,7 +43,6 @@ public class GameMaster : MonoBehaviour {
 	void OnMouseDown() {
 		if (state == State.PLAYER_TURN && !_moveSelected) {
 			Vector2Int pos = CustomGrid.Instance.GetMouseGridPosition();
-			Debug.Log(pos);
 			if (_possibleMoveLocations.Contains(pos)) {
 				_moveSelected = true;
 				_selectedMove = pos;
@@ -68,6 +67,11 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	IEnumerator _EnemyTurn() {
+		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
+		foreach (Enemy enemy in Enemies) {
+			Vector2Int nxt = enemy.GetBestMove();
+			if (nxt != enemy.pos) yield return StartCoroutine(CustomGrid.Instance.MoveUnit(enemy.pos, nxt));
+		}
 		yield return null;
 	}
 }
