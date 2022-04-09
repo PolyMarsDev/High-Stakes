@@ -11,6 +11,7 @@ public class GameMaster : MonoBehaviour {
 
 	State state;
 	Player player;
+	public int blood;
 
 	void Awake() {
 		player = FindObjectOfType<Player>();
@@ -26,7 +27,6 @@ public class GameMaster : MonoBehaviour {
 		state = State.BEGIN;
 
 		// Run some initialization code
-
 		state = State.PLAYER_TURN;
 
 		while (CustomGrid.Instance.Player) {
@@ -37,16 +37,45 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	bool _moveSelected = false;
+	bool _specialMove = false;
 	List<Vector2Int> _possibleMoveLocations;
 	Vector2Int _selectedMove;
 
 	void OnMouseDown() {
+		// Have a button that you click on to toggle normal/special move? Pseudocode below.
+		// if (click on button and not _specialMove) {
+		//	_specialMove = true;
+		//	this.switchIndicators();
+		// }
+		// else if (click on button and _specialMove) {
+		//	_specialMove = false;
+		//	this.switchIndicators();
+		// }
 		if (state == State.PLAYER_TURN && !_moveSelected) {
 			Vector2Int pos = CustomGrid.Instance.GetMouseGridPosition();
 			if (_possibleMoveLocations.Contains(pos)) {
 				_moveSelected = true;
 				_selectedMove = pos;
 			}
+		}
+	}
+
+	void switchIndicators() {
+		if (!_specialMove) {
+			_possibleMoveLocations = player.GetSpecialMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.removeIndicator(pos);
+			_possibleMoveLocations = player.GetMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.removeIndicator(pos);
+		}
+		else {
+			_possibleMoveLocations = player.GetMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.removeIndicator(pos);
+			_possibleMoveLocations = player.GetSpecialMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.removeIndicator(pos);
 		}
 	}
 
