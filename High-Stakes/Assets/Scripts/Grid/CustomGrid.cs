@@ -13,6 +13,7 @@ public class CustomGrid : MonoBehaviour {
 	Unit[,] units;
 
 	public Player Player {get; private set; }
+	public Door Door {get; private set; }
 	public List<Enemy> Enemies {get; private set; }
 
 	// Prioritized being called before anything else

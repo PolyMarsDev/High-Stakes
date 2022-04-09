@@ -10,7 +10,8 @@ public abstract class Unit : MonoBehaviour {
 	protected CustomGrid Grid => CustomGrid.Instance;
 
 	void OnEnable() {
-		pos = CustomGrid.Instance.SnapCoordinate(transform.position);
+		if (CustomGrid.Instance != null)
+			pos = CustomGrid.Instance.SnapCoordinate(transform.position);
 		CustomGrid.Instance?.AddUnit(pos, this);
 	}
 
