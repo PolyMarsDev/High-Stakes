@@ -17,4 +17,15 @@ public class Player : Unit {
 		}
 		return adjacents;
 	}
+	public override List<Vector2Int> GetSpecialMoveTo() {
+		int[] dx = {1, -1, 1, -1, 2, -2, 2, -2};
+		int[] dy = {2, 2, -2, -2, 1, 1, -1, -1};
+
+		List<Vector2Int> adjacents = new List<Vector2Int>();
+		for (int k = 0; k < 8; k++) {
+			Vector2Int nxtPos = pos + Vector2Int.right * dx[k] + Vector2Int.up * dy[k];
+			if (CustomGrid.Instance.CanMoveTo(nxtPos)) adjacents.Add(nxtPos);
+		}
+		return adjacents;
+	}
 }

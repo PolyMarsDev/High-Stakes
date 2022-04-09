@@ -11,6 +11,7 @@ public class GameMaster : MonoBehaviour {
 
 	State state;
 	Player player;
+	public int blood;
 
 	[Range(0, 3)]
 	public int KeysRequired;
@@ -30,7 +31,6 @@ public class GameMaster : MonoBehaviour {
 		state = State.BEGIN;
 
 		// Run some initialization code
-
 		state = State.PLAYER_TURN;
 		Keys = 0;
 
@@ -45,10 +45,18 @@ public class GameMaster : MonoBehaviour {
 		&& player.pos == CustomGrid.Instance.Door.pos;
 
 	bool _moveSelected = false;
+	bool _specialMove = false;
 	List<Vector2Int> _possibleMoveLocations;
 	Vector2Int _selectedMove;
 
 	void OnMouseDown() {
+		// Have a button that you click on to toggle normal/special move? Pseudocode below.
+		// if (click on button and not _specialMove) {
+		//	this.switchIndicators();
+		// }
+		// else if (click on button and _specialMove) {
+		//	this.switchIndicators();
+		// }
 		if (state == State.PLAYER_TURN && !_moveSelected) {
 			Vector2Int pos = CustomGrid.Instance.GetMouseGridPosition();
 			if (_possibleMoveLocations.Contains(pos)) {
@@ -56,6 +64,26 @@ public class GameMaster : MonoBehaviour {
 				_selectedMove = pos;
 			}
 		}
+	}
+
+	void switchIndicators() {
+		if (!_specialMove) {
+			_possibleMoveLocations = player.GetSpecialMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.removeIndicator(pos);
+			_possibleMoveLocations = player.GetMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+		}
+		else {
+			_possibleMoveLocations = player.GetMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.removeIndicator(pos);
+			_possibleMoveLocations = player.GetSpecialMoveTo();
+			foreach (Vector2Int pos in _possibleMoveLocations)
+				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+		}
+		_specialMove = !_specialMove;
 	}
 
 	IEnumerator _PlayerTurn() {
@@ -69,6 +97,9 @@ public class GameMaster : MonoBehaviour {
 			yield return null;
 
 		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
+
+		if (!_specialMove)	blood -= 1;
+		else				blood -= 2;
 
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.removeIndicator(pos);
