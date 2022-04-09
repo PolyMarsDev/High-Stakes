@@ -49,7 +49,6 @@ public class CustomGrid : MonoBehaviour {
 		units[pos.x, pos.y] = unit;
 	}
 	public void RemoveUnit(Vector2Int pos) {
-		Debug.Log("HI " + pos);
 		if (units[pos.x, pos.y] is Enemy) 
 			Enemies.Remove(units[pos.x, pos.y] as Enemy);
 		if (units[pos.x, pos.y] is Player) 

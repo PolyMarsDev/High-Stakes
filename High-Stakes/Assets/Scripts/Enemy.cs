@@ -9,6 +9,8 @@ public abstract class Enemy : Unit {
 	public abstract bool CanAttackPlayer();
 	public abstract Vector2Int GetBestMove();
 
+	public bool HasEnemy(Vector2Int pos) => Grid.GetUnitAt(pos) is Enemy;
+
     // public Tilemap tilemap;
 	// public TileBase testTile;
 	// public void OnMovement(InputValue value) {
