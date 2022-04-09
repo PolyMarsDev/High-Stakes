@@ -52,11 +52,9 @@ public class GameMaster : MonoBehaviour {
 	void OnMouseDown() {
 		// Have a button that you click on to toggle normal/special move? Pseudocode below.
 		// if (click on button and not _specialMove) {
-		//	_specialMove = true;
 		//	this.switchIndicators();
 		// }
 		// else if (click on button and _specialMove) {
-		//	_specialMove = false;
 		//	this.switchIndicators();
 		// }
 		if (state == State.PLAYER_TURN && !_moveSelected) {
@@ -75,7 +73,7 @@ public class GameMaster : MonoBehaviour {
 				GridUI.Instance.removeIndicator(pos);
 			_possibleMoveLocations = player.GetMoveTo();
 			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.removeIndicator(pos);
+				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
 		}
 		else {
 			_possibleMoveLocations = player.GetMoveTo();
@@ -83,8 +81,9 @@ public class GameMaster : MonoBehaviour {
 				GridUI.Instance.removeIndicator(pos);
 			_possibleMoveLocations = player.GetSpecialMoveTo();
 			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.removeIndicator(pos);
+				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
 		}
+		_specialMove = !_specialMove;
 	}
 
 	IEnumerator _PlayerTurn() {
@@ -98,6 +97,9 @@ public class GameMaster : MonoBehaviour {
 			yield return null;
 
 		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
+
+		if (!_specialMove)	blood -= 1;
+		else				blood -= 2;
 
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.removeIndicator(pos);
