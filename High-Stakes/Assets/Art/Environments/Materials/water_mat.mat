@@ -48,6 +48,8 @@ Material:
     m_Floats:
     - Vector1_2978CB76: 0.04
     - Vector1_5D081BA7: 2.9
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_8648BF0: {r: 0, g: 0.64371985, b: 1.9525514, a: 0}
     - Vector2_2BA8FDAC: {r: 0, g: 0.2, b: 0, a: 0}

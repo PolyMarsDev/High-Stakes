@@ -50,6 +50,8 @@ Material:
     - Vector1_31badfa2f2494f13aff08b4daa9763c2: 0.44
     - Vector1_43257789a71e44a490928ec34b6b3066: 2
     - Vector1_61d549c5cfda4caf869442843b4904b9: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_796fe05f9a4946b19ad3ef1d62d86ca7: {r: 0.5591953, g: 0, b: 2.6701574, a: 0}
     - Vector2_18dbb32e20f5447cad0bd48524f87547: {r: 2, g: 0, b: 0, a: 0}
