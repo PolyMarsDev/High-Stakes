@@ -59,6 +59,8 @@ public class CustomGrid : MonoBehaviour {
 	} 
 	public void RemoveUnit(Unit unit) => RemoveUnit(unit.pos);
 
+	public void RegisterDoor(Door door) => Door = door;
+
 	public IEnumerator MoveUnit(Vector2Int src, Vector2Int dest) {
 		if (!ValidSquare(src)) throw new Exception(src + " not in range of grid of size" + Size);
 		if (!ValidSquare(dest)) throw new Exception(dest + " not in range of grid of size" + Size);
