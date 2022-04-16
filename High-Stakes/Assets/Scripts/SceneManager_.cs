@@ -41,6 +41,5 @@ public class SceneManager_ : MonoBehaviour
             overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, Mathf.SmoothStep(1.0f, 0.0f, i));
             yield return new WaitForSeconds(.01f);
         }
-        ReloadScene();
     }
 }
