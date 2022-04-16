@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameMaster : MonoBehaviour {
+	public static GameMaster Instance;
+
 	public enum State {
 		BEGIN,
 		PLAYER_TURN,
@@ -12,6 +14,7 @@ public class GameMaster : MonoBehaviour {
 	State state;
 	Player player;
 
+	[Range(1, 30)]
 	public int StartingBlood;
 	public int Blood {get; private set; }
 
@@ -19,9 +22,17 @@ public class GameMaster : MonoBehaviour {
 	public int KeysRequired;
 	public int Keys {get; private set; }
 
+	[Range(1, 10)]
+	public int NormalBloodCost = 1;
+	[Range(1, 10)]
+	public int SpecialBloodCost = 3;
+	[Range(1, 10)]
+	public int CaptureBloodGain = 3;
+
 	void Awake() {
 		player = FindObjectOfType<Player>();
 		if (!player) throw new System.Exception("GameMaster: There's no player in this scene. What's my purpose then?");
+		Instance = this;
 	}
 
 	void Start() {
@@ -68,28 +79,47 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 	}
-	void switchIndicators() {
-		if (!_specialMove) {
-			_possibleMoveLocations = player.GetSpecialMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.removeIndicator(pos);
-			_possibleMoveLocations = player.GetMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
-		}
-		else {
-			_possibleMoveLocations = player.GetMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.removeIndicator(pos);
-			_possibleMoveLocations = player.GetSpecialMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
-		}
-		_specialMove = !_specialMove;
+	public void SwitchIndicators(bool toSpecial) {
+		if (_specialMove == toSpecial) return;
+
+		// refractor a bit
+		foreach (Vector2Int pos in _possibleMoveLocations)
+			GridUI.Instance.removeIndicator(pos);
+		if (toSpecial) 	_possibleMoveLocations = player.GetSpecialMoveTo();
+		else			_possibleMoveLocations = player.GetMoveTo();
+		foreach (Vector2Int pos in _possibleMoveLocations)
+			GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+
+		// if (!_specialMove) {
+		// 	_possibleMoveLocations = player.GetSpecialMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.removeIndicator(pos);
+		// 	_possibleMoveLocations = player.GetMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+		// }
+		// else {
+		// 	_possibleMoveLocations = player.GetMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.removeIndicator(pos);
+		// 	_possibleMoveLocations = player.GetSpecialMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+		// }
+		_specialMove = toSpecial;
 	}
 
 	IEnumerator _PlayerTurn() {
+		PlayerMoveIndicator Indicator = FindObjectOfType<PlayerMoveIndicator>(); // Inefficient as hell so fix if needed
+
+		if (Indicator) {
+			Indicator.Active = true;
+			// check not needed 
+			if (Indicator.mode != PlayerMoveIndicator.Mode.Normal) Indicator.mode = PlayerMoveIndicator.Mode.Normal;
+		}
+
 		// Render UI
+		_specialMove = false;
 		_possibleMoveLocations = player.GetMoveTo();
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
@@ -98,13 +128,16 @@ public class GameMaster : MonoBehaviour {
 		while (!_moveSelected) 
 			yield return null;
 
-		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
-
-		if (!_specialMove)	Blood -= 1;
-		else				Blood -= 2;
-
+		if (Indicator) Indicator.Active = false;
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.removeIndicator(pos);
+
+		if (!_specialMove)	Blood -= NormalBloodCost;
+		else				Blood -= SpecialBloodCost;
+
+		bool isCapture = CustomGrid.Instance.GetUnitAt(_selectedMove) is Enemy;
+		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
+		if (isCapture) 		Blood += CaptureBloodGain;
 	}
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
