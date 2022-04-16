@@ -1864,7 +1864,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8220339, y: 1}
+    m_SensorSize: {x: 1.6009616, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6785,7 +6785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundGrid: {fileID: 745993028}
-  wallGrid: {fileID: 0}
+  leftWall: {fileID: 0}
+  botWall: {fileID: 0}
   Size: {x: 8, y: 8}
   YplaneOffset: 1
 --- !u!1001 &1894321104
