@@ -8,6 +8,8 @@ using System.Collections.Generic;
 public class CustomGrid : MonoBehaviour {
 	public static CustomGrid Instance;
 	public Tilemap groundGrid;
+
+	public Tilemap wallGrid;
 	public Vector2Int Size;
 	public float YplaneOffset = 1f;
 	Unit[,] units;
