@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class SceneManager_ : MonoBehaviour
 {
+
+    public static SceneManager_ Instance;
     public Image overlay;
 
     public void Start()
@@ -22,7 +24,7 @@ public class SceneManager_ : MonoBehaviour
     {
         LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public IEnumerator FadeToScene(int index)
+    private IEnumerator FadeToScene(int index)
     {
         for (float i = 0f; i <= 1f; i += 0.01f)
         {
@@ -32,7 +34,7 @@ public class SceneManager_ : MonoBehaviour
         SceneManager.LoadScene(index);
     }
 
-    public IEnumerator FadeIn()
+    private IEnumerator FadeIn()
     {
         for (float i = 0f; i <= 1f; i += 0.01f)
         {
