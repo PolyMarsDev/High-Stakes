@@ -11,6 +11,11 @@ public class SceneManager_ : MonoBehaviour
     public static SceneManager_ Instance;
     public Image overlay;
 
+    public void Awake()
+    {
+        Instance = this;
+    }
+
     public void Start()
     {
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1.0f);
