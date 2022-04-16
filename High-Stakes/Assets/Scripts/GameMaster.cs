@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameMaster : MonoBehaviour {
+	public static GameMaster Instance;
+
 	public enum State {
 		BEGIN,
 		PLAYER_TURN,
@@ -22,6 +24,7 @@ public class GameMaster : MonoBehaviour {
 	void Awake() {
 		player = FindObjectOfType<Player>();
 		if (!player) throw new System.Exception("GameMaster: There's no player in this scene. What's my purpose then?");
+		Instance = this;
 	}
 
 	void Start() {
@@ -68,28 +71,47 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 	}
-	void switchIndicators() {
-		if (!_specialMove) {
-			_possibleMoveLocations = player.GetSpecialMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.removeIndicator(pos);
-			_possibleMoveLocations = player.GetMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
-		}
-		else {
-			_possibleMoveLocations = player.GetMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.removeIndicator(pos);
-			_possibleMoveLocations = player.GetSpecialMoveTo();
-			foreach (Vector2Int pos in _possibleMoveLocations)
-				GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
-		}
-		_specialMove = !_specialMove;
+	public void SwitchIndicators(bool toSpecial) {
+		if (_specialMove == toSpecial) return;
+
+		// refractor a bit
+		foreach (Vector2Int pos in _possibleMoveLocations)
+			GridUI.Instance.removeIndicator(pos);
+		if (toSpecial) 	_possibleMoveLocations = player.GetSpecialMoveTo();
+		else			_possibleMoveLocations = player.GetMoveTo();
+		foreach (Vector2Int pos in _possibleMoveLocations)
+			GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+
+		// if (!_specialMove) {
+		// 	_possibleMoveLocations = player.GetSpecialMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.removeIndicator(pos);
+		// 	_possibleMoveLocations = player.GetMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+		// }
+		// else {
+		// 	_possibleMoveLocations = player.GetMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.removeIndicator(pos);
+		// 	_possibleMoveLocations = player.GetSpecialMoveTo();
+		// 	foreach (Vector2Int pos in _possibleMoveLocations)
+		// 		GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+		// }
+		_specialMove = toSpecial;
 	}
 
 	IEnumerator _PlayerTurn() {
+		PlayerMoveIndicator Indicator = FindObjectOfType<PlayerMoveIndicator>(); // Inefficient as hell so fix if needed
+
+		if (Indicator) {
+			Indicator.Active = true;
+			// check not needed 
+			if (Indicator.mode != PlayerMoveIndicator.Mode.Normal) Indicator.mode = PlayerMoveIndicator.Mode.Normal;
+		}
+
 		// Render UI
+		_specialMove = false;
 		_possibleMoveLocations = player.GetMoveTo();
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
@@ -98,13 +120,14 @@ public class GameMaster : MonoBehaviour {
 		while (!_moveSelected) 
 			yield return null;
 
-		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
+		if (Indicator) Indicator.Active = false;
+		foreach (Vector2Int pos in _possibleMoveLocations)
+			GridUI.Instance.removeIndicator(pos);
 
 		if (!_specialMove)	Blood -= 1;
 		else				Blood -= 2;
 
-		foreach (Vector2Int pos in _possibleMoveLocations)
-			GridUI.Instance.removeIndicator(pos);
+		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
 	}
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
