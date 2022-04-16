@@ -11,7 +11,9 @@ public class GameMaster : MonoBehaviour {
 
 	State state;
 	Player player;
-	public int blood;
+
+	public int StartingBlood;
+	public int Blood {get; private set; }
 
 	[Range(0, 3)]
 	public int KeysRequired;
@@ -33,6 +35,7 @@ public class GameMaster : MonoBehaviour {
 		// Run some initialization code
 		state = State.PLAYER_TURN;
 		Keys = 0;
+		Blood = StartingBlood;
 
 		while (CustomGrid.Instance.Player && !WinConditionSatisfied()) {
 			if (state == State.PLAYER_TURN) 		yield return _PlayerTurn();
@@ -65,7 +68,6 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 	}
-
 	void switchIndicators() {
 		if (!_specialMove) {
 			_possibleMoveLocations = player.GetSpecialMoveTo();
@@ -98,8 +100,8 @@ public class GameMaster : MonoBehaviour {
 
 		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
 
-		if (!_specialMove)	blood -= 1;
-		else				blood -= 2;
+		if (!_specialMove)	Blood -= 1;
+		else				Blood -= 2;
 
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.removeIndicator(pos);

@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
 
 public class Player : Unit {
-
 	public override List<Vector2Int> GetMoveTo() {
 		int[] dx = {1, -1, 0, 0};
 		int[] dy = {0, 0, -1, 1};
@@ -17,7 +16,8 @@ public class Player : Unit {
 		}
 		return adjacents;
 	}
-	public override List<Vector2Int> GetSpecialMoveTo() {
+
+	public List<Vector2Int> GetSpecialMoveTo() {
 		int[] dx = {1, -1, 1, -1, 2, -2, 2, -2};
 		int[] dy = {2, 2, -2, -2, 1, 1, -1, -1};
 
