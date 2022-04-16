@@ -28,8 +28,10 @@ public class Peasant : Enemy {
 	public override Vector2Int GetBestMove() {
 		if (CanSeePlayer()) {
 			if (CanAttackPlayer()) return Grid.Player.pos;
-			Vector2Int desiredPosition = GetDelta(Grid.Player.pos - pos) + pos;
-			if (Grid.CanMoveTo(desiredPosition) && !HasEnemy(desiredPosition)) return desiredPosition;
+			Vector2Int delta = GetDelta(Grid.Player.pos - pos);
+			Vector2Int desiredPosition = delta + pos;
+			if (Grid.CanMoveTo(desiredPosition, DirectionExtension.Convert(delta).Reflect()) 
+				&& !HasEnemy(desiredPosition)) return desiredPosition;
 		}
 		return pos;
 	}
@@ -41,7 +43,8 @@ public class Peasant : Enemy {
 		List<Vector2Int> adjacents = new List<Vector2Int>();
 		for (int k = 0; k < 4; k++) {
 			Vector2Int nxtPos = pos + Vector2Int.right * dx[k] + Vector2Int.up * dy[k];
-			if (CustomGrid.Instance.CanMoveTo(nxtPos)) adjacents.Add(nxtPos);
+			if (CustomGrid.Instance.CanMoveTo(nxtPos, DirectionExtension.Convert(new Vector2Int(dx[k], dy[k])).Reflect())) 
+				adjacents.Add(nxtPos);
 		}
 		return adjacents;
 	}

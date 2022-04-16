@@ -12,7 +12,10 @@ public class Player : Unit {
 		List<Vector2Int> adjacents = new List<Vector2Int>();
 		for (int k = 0; k < 4; k++) {
 			Vector2Int nxtPos = pos + Vector2Int.right * dx[k] + Vector2Int.up * dy[k];
-			if (CustomGrid.Instance.CanMoveTo(nxtPos)) adjacents.Add(nxtPos);
+			Direction entranceDir = DirectionExtension.Convert(dx[k], dy[k]).Reflect();
+			// Debug.Log(entranceDir.ToString());
+			if (CustomGrid.Instance.CanMoveTo(nxtPos, entranceDir)) 
+				adjacents.Add(nxtPos);
 		}
 		return adjacents;
 	}
