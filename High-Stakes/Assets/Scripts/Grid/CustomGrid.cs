@@ -4,10 +4,17 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 
 public class CustomGrid : MonoBehaviour {
 	public static CustomGrid Instance;
+
+	[HorizontalLine(2, EColor.Green)]
+	[Header("Tilemaps")]
 	public Tilemap groundGrid;
+	public Tilemap leftWall;
+	public Tilemap botWall;
+
 	public Vector2Int Size;
 	public float YplaneOffset = 1f;
 	Unit[,] units;
@@ -27,8 +34,35 @@ public class CustomGrid : MonoBehaviour {
 		Player = null;
 	}
 
+
+	bool HasWall(int x, int y, Direction dir) {
+		if (dir.IsHorizontal()) return leftWall.HasTile(new Vector3Int(x + (dir != Direction.LEFT ? 1 : 0), y, 0));
+		if (dir.IsVertical()) return botWall.HasTile(new Vector3Int(x + (dir != Direction.UP ? 1 : 0), y, 0));
+		return false;
+	}
+
 	public bool ValidSquare(int x, int y) => (x >= 0 && x < Size.x && y >= 0 && y < Size.y);
 	public bool ValidSquare(Vector2Int pos) => ValidSquare(pos.x, pos.y);
+	public int Dist(Vector2Int pos) => Mathf.Max(Mathf.Abs(pos.x), Mathf.Abs(pos.y));
+
+	public bool VisionCast(Vector2Int src, Vector2Int delta, int dist, 
+		bool EnemyBlock = true, bool PlayerBlock = true) {
+		
+		for (int k = 1; k <= dist; k++) {
+			Vector2Int nxt = src + k * delta;
+			if (!ValidSquare(nxt)) return false; // Shouldn't ever run but I put it here just in case
+			if (GetUnitAt(nxt) is Enemy && EnemyBlock) return false;
+			if (GetUnitAt(nxt) is Player && PlayerBlock) return false;
+			if (!CanSeeThrough(nxt)) return false;
+		}
+
+		return true;
+	}
+
+	public bool IsHorizontal(Vector2Int dir) => dir != Vector2Int.zero && 
+		((dir.x == 0) || (dir.y == 0));
+	public bool IsDiagonal(Vector2Int dir) => dir != Vector2Int.zero &&
+		(dir.x == dir.y || dir.x == -dir.y);
 
 	public bool CanMoveTo(int x, int y) => ValidSquare(x,y) && !(units[x, y] is Obstacle); // for now
 	public bool CanMoveTo(Vector2Int pos) => ValidSquare(pos) && (!GetUnitAt(pos) || !(GetUnitAt(pos) is Obstacle));
