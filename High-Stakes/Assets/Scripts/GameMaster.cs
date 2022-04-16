@@ -14,12 +14,20 @@ public class GameMaster : MonoBehaviour {
 	State state;
 	Player player;
 
+	[Range(1, 30)]
 	public int StartingBlood;
 	public int Blood {get; private set; }
 
 	[Range(0, 3)]
 	public int KeysRequired;
 	public int Keys {get; private set; }
+
+	[Range(1, 10)]
+	public int NormalBloodCost = 1;
+	[Range(1, 10)]
+	public int SpecialBloodCost = 3;
+	[Range(1, 10)]
+	public int CaptureBloodGain = 3;
 
 	void Awake() {
 		player = FindObjectOfType<Player>();
@@ -124,10 +132,12 @@ public class GameMaster : MonoBehaviour {
 		foreach (Vector2Int pos in _possibleMoveLocations)
 			GridUI.Instance.removeIndicator(pos);
 
-		if (!_specialMove)	Blood -= 1;
-		else				Blood -= 2;
+		if (!_specialMove)	Blood -= NormalBloodCost;
+		else				Blood -= SpecialBloodCost;
 
+		bool isCapture = CustomGrid.Instance.GetUnitAt(_selectedMove) is Enemy;
 		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
+		if (isCapture) 		Blood += CaptureBloodGain;
 	}
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
