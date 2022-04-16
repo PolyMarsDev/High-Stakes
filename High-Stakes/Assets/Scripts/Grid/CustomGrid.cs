@@ -9,8 +9,8 @@ using NaughtyAttributes;
 public class CustomGrid : MonoBehaviour {
 	public static CustomGrid Instance;
 
-	[HorizontalLine(2, EColor.Green)]
 	[Header("Tilemaps")]
+	[HorizontalLine(2, EColor.Green)]
 	public Tilemap groundGrid;
 	public Tilemap leftWall;
 	public Tilemap botWall;
@@ -36,8 +36,9 @@ public class CustomGrid : MonoBehaviour {
 
 
 	bool HasWall(int x, int y, Direction dir) {
+		Debug.Log(dir.IsHorizontal() + " " + dir.IsVertical() + " " +  botWall.GetTile(new Vector3Int(x , y+ (dir != Direction.UP ? 1 : 0), 0)));
 		if (dir.IsHorizontal()) return leftWall.HasTile(new Vector3Int(x + (dir != Direction.LEFT ? 1 : 0), y, 0));
-		if (dir.IsVertical()) return botWall.HasTile(new Vector3Int(x + (dir != Direction.UP ? 1 : 0), y, 0));
+		if (dir.IsVertical()) return botWall.HasTile(new Vector3Int(x , y+ (dir != Direction.UP ? 1 : 0), 0));
 		return false;
 	}
 
@@ -64,8 +65,16 @@ public class CustomGrid : MonoBehaviour {
 	public bool IsDiagonal(Vector2Int dir) => dir != Vector2Int.zero &&
 		(dir.x == dir.y || dir.x == -dir.y);
 
-	public bool CanMoveTo(int x, int y) => ValidSquare(x,y) && !(units[x, y] is Obstacle); // for now
-	public bool CanMoveTo(Vector2Int pos) => ValidSquare(pos) && (!GetUnitAt(pos) || !(GetUnitAt(pos) is Obstacle));
+	public bool CanMoveTo(int x, int y) => CanMoveTo(new Vector2Int(x,y));
+	public bool CanMoveTo(int x, int y, Direction direction = Direction.LEFT) => CanMoveTo(new Vector2Int(x,y), direction); // for now
+	public bool CanMoveTo(Vector2Int pos) {
+		return ValidSquare(pos) && (!GetUnitAt(pos) || !(GetUnitAt(pos) is Obstacle));
+	}
+	public bool CanMoveTo(Vector2Int pos, Direction direction) {
+		bool movAvailable = !HasWall(pos.x, pos.y, direction);
+		Debug.Log(movAvailable);
+		return movAvailable && CanMoveTo(pos);
+	}
 
 	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && !HasUnitAt(x, y) 
 		|| (GetUnitAt(x,y) is Obstacle) && (GetUnitAt(x,y) as Obstacle).IsTransparent; // TODO: Change after implementing obstacles;
