@@ -33,8 +33,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2ED52C11: 0.28
-    - Vector1_B2AEBB10: 2
+    - Vector1_2ED52C11: 0.84
+    - Vector1_B2AEBB10: 3.66
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
