@@ -68,11 +68,10 @@ public class CustomGrid : MonoBehaviour {
 	public bool CanMoveTo(int x, int y) => CanMoveTo(new Vector2Int(x,y));
 	public bool CanMoveTo(int x, int y, Direction direction = Direction.LEFT) => CanMoveTo(new Vector2Int(x,y), direction); // for now
 	public bool CanMoveTo(Vector2Int pos) {
-		return ValidSquare(pos) && (!GetUnitAt(pos) || !(GetUnitAt(pos) is Obstacle));
+		return ValidSquare(pos) && !(GetUnitAt(pos) is Obstacle);
 	}
 	public bool CanMoveTo(Vector2Int pos, Direction direction) {
 		bool movAvailable = !HasWall(pos.x, pos.y, direction);
-		Debug.Log(movAvailable);
 		return movAvailable && CanMoveTo(pos);
 	}
 
