@@ -29,8 +29,8 @@ public abstract class LiveUnit : Unit {
 
 	[Header("Animation")]
 	[HorizontalLine(color: EColor.Green)]
-	[Range(.1f, 2f), SerializeField] float MoveDuration;
-	[Range(.1f, 2f), SerializeField] float AttackDuration;
+	[Range(.1f, 2f), SerializeField] float MoveDuration = 1f;
+	[Range(.1f, 2f), SerializeField] float AttackDuration = 1f;
 	public UnityEvent OnMove;
 
 	public override IEnumerator MoveTo(Vector2Int pos) {

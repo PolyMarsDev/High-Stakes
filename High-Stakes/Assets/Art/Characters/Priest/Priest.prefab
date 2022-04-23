@@ -48,6 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: 0, y: 0}
+  MoveDuration: 1
+  AttackDuration: 1
+  OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1928032775
 Animator:
   serializedVersion: 4
