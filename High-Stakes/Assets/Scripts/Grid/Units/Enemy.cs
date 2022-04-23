@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public abstract class Enemy : Unit {
+public abstract class Enemy : LiveUnit {
 	public abstract bool CanSeePlayer();
 	public abstract bool CanAttackPlayer();
 	public abstract Vector2Int GetBestMove();
