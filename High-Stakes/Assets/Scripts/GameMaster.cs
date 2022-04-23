@@ -53,7 +53,8 @@ public class GameMaster : MonoBehaviour {
 			else if (state == State.ENEMY_TURN)		yield return _EnemyTurn();
 			state = State.PLAYER_TURN == state ? State.ENEMY_TURN : State.PLAYER_TURN;
 		}
-        SceneManager_.Instance.ReloadScene();
+		if (WinConditionSatisfied()) SceneManager_.Instance.ReloadScene();
+		else SceneManager_.Instance.LoadScene(3);
     }
 
 	public bool WinConditionSatisfied() => Keys == KeysRequired && CustomGrid.Instance.Door && CustomGrid.Instance.Player 
