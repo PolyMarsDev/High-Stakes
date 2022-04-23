@@ -36,7 +36,6 @@ public class CustomGrid : MonoBehaviour {
 
 
 	bool HasWall(int x, int y, Direction dir) {
-		Debug.Log(dir.IsHorizontal() + " " + dir.IsVertical() + " " +  botWall.GetTile(new Vector3Int(x , y+ (dir != Direction.UP ? 1 : 0), 0)));
 		if (dir.IsHorizontal()) return leftWall.HasTile(new Vector3Int(x + (dir != Direction.LEFT ? 1 : 0), y, 0));
 		if (dir.IsVertical()) return botWall.HasTile(new Vector3Int(x , y+ (dir != Direction.UP ? 1 : 0), 0));
 		return false;
@@ -49,7 +48,7 @@ public class CustomGrid : MonoBehaviour {
 	public bool VisionCast(Vector2Int src, Vector2Int delta, int dist, 
 		bool EnemyBlock = true, bool PlayerBlock = true) {
 		
-		for (int k = 1; k <= dist; k++) {
+		for (int k = 1; k < dist; k++) {
 			Vector2Int nxt = src + k * delta;
 			if (!ValidSquare(nxt)) return false; // Shouldn't ever run but I put it here just in case
 			if (GetUnitAt(nxt) is Enemy && EnemyBlock) return false;

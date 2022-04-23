@@ -7,6 +7,7 @@ public class Priest : Enemy {
 		if (!Grid.Player) return false;
 
 		Vector2Int displacement = Grid.Player.pos - pos;
+		Debug.Log(displacement);
 		return (displacement.x == displacement.y || displacement.x == -displacement.y) && displacement.x == 1;
 	}
 
@@ -38,6 +39,7 @@ public class Priest : Enemy {
 			if (CanAttackPlayer()) return Grid.Player.pos;
 			Vector2Int displacement = Grid.Player.pos - pos;
 			Vector2Int desiredPosition = displacement / Mathf.Abs(displacement.x) + pos;
+			Debug.Log(desiredPosition + " " + Grid.CanMoveTo(desiredPosition));
 			if (Grid.CanMoveTo(desiredPosition) && !HasEnemy(desiredPosition)) 
 				return desiredPosition;
 		}
