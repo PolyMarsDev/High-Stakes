@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989152657361730501}
-  - component: {fileID: 2954444595889635879}
-  m_Layer: 0
+  - component: {fileID: 8732472764007540939}
+  m_Layer: 6
   m_Name: pf_fountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2954444595889635879
+--- !u!114 &8732472764007540939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7694293872063398979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca284c7c7aea0a94c8b0347ab9e6cf76, type: 3}
+  m_Script: {fileID: 11500000, guid: 01bda38078b56524692457b719827f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: 0, y: 0}
@@ -98,9 +98,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8003417198925400070, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2606144858990433800, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
       propertyPath: m_Name
       value: obj_fountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375491472025259090, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000780156227406963, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9ecb288d1cd4e60aaf496a5460b68c, type: 3}
