@@ -3,8 +3,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
+using System.Collections;
+using UnityEngine.Events;
 
-public class Player : Unit {
+[RequireComponent(typeof(Animator))]
+public class Player : LiveUnit {
+
 	public override List<Vector2Int> GetMoveTo() {
 		int[] dx = {1, -1, 0, 0};
 		int[] dy = {0, 0, -1, 1};
@@ -31,4 +35,5 @@ public class Player : Unit {
 		}
 		return adjacents;
 	}
+
 }
