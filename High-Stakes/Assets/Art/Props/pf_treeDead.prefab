@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8408690443907450248}
   - component: {fileID: 8201374555076804230}
   m_Layer: 6
-  m_Name: pf_treeAThicc
+  m_Name: pf_treeDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
