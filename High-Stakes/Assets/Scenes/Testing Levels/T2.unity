@@ -2230,7 +2230,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.99258476, y: 1}
+    m_SensorSize: {x: 0.68114406, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7416,6 +7416,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d7f9618b27292b43af59b3cc30ceaae, type: 3}
   m_PrefabInstance: {fileID: 1710697786}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1724599582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3885663391184070147, guid: 6b66b4fb48cbb914583d9a7f0ad2c6b4, type: 3}
+  m_PrefabInstance: {fileID: 3885663391181933645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1724599584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724599582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2862c4bd0297f43afeb690fdadf418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraProvider:
+    enabled: 0
+    value: {fileID: 0}
+--- !u!95 &1724599585
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724599582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b542cd61d22a6834bad24cf63ccff558, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1736146304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8918,6 +8958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vampire Hunter
       objectReference: {fileID: 0}
+    - target: {fileID: 3885663391522078396, guid: 6b66b4fb48cbb914583d9a7f0ad2c6b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1323914843, guid: 303e0eef2d445414499c9d650b1838aa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b66b4fb48cbb914583d9a7f0ad2c6b4, type: 3}
 --- !u!1001 &4402570238785350339
@@ -9032,5 +9076,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8609857031714128373, guid: 3a6b721f864873140b490bca3e804205, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 691db690c2d0802409513cf61b6f234d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a6b721f864873140b490bca3e804205, type: 3}
