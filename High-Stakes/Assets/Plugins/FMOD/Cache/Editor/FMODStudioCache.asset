@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7267495759905107262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantMove
+  Guid:
+    Data1: -241796353
+    Data2: 1106625575
+    Data3: -1464535376
+    Data4: 1922032425
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 450
 --- !u!114 &-6177877544521632262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,65 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637863214921147033
+  lastModified: 637863265711731617
   FileSizes:
   - Name: Desktop
-    Value: 734
+    Value: 1016
   Exists: 1
+--- !u!114 &-5953256314929334542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterMove
+  Guid:
+    Data1: 359454363
+    Data2: 1074968235
+    Data3: -62354289
+    Data4: -341718139
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-255914431361165891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level
+  m_EditorClassIdentifier: 
+  Path: event:/Level
+  Guid:
+    Data1: -461976317
+    Data2: 1277410837
+    Data3: -1822332264
+    Data4: 1402479605
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 151875
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,12 +118,17 @@ MonoBehaviour:
   - {fileID: 6174188379073054063}
   EditorEvents:
   - {fileID: 3022548572943360535}
+  - {fileID: -7267495759905107262}
+  - {fileID: -255914431361165891}
+  - {fileID: 5314063910938100948}
+  - {fileID: -5953256314929334542}
+  - {fileID: 3074495992225988132}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6174188379073054063}
   StringsBanks:
   - {fileID: -6177877544521632262}
-  cacheTime: 637863214921147033
+  cacheTime: 637863265711731617
   cacheVersion: 10
 --- !u!114 &3022548572943360535
 MonoBehaviour:
@@ -71,6 +157,60 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 128391
+--- !u!114 &3074495992225988132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestMove
+  Guid:
+    Data1: -1314120133
+    Data2: 1259112634
+    Data3: -968906063
+    Data4: -507115957
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &5314063910938100948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterDeath
+  Guid:
+    Data1: -2008408345
+    Data2: 1168623914
+    Data3: 215739799
+    Data4: -1049429263
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1966
 --- !u!114 &6174188379073054063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +226,8 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637863214921137051
+  lastModified: 637863265711661520
   FileSizes:
   - Name: Desktop
-    Value: 1553632
+    Value: 3517024
   Exists: 1
