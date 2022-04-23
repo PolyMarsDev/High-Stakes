@@ -29,6 +29,11 @@ public class SceneManager_ : MonoBehaviour
     {
         LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public int GetActiveScene()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
     private IEnumerator FadeToScene(int index)
     {
         for (float i = 0f; i <= 1f; i += 0.01f)
