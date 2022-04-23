@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 using Utils;
 
 public class CircularRotationOnInput : MonoBehaviour {
-	float currentRotationAngle;
-	int desiredRotation;
+	public float currentRotationAngle {get; private set; }
+	public int desiredRotation {get; private set; }
+	public int rotationAngle => Mathf.RoundToInt(currentRotationAngle / 90f);
 	public float dampAlpha = 2f;
 
 	public void OnRotate(InputValue value) {
