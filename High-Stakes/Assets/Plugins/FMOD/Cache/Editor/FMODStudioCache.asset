@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637869203909076090
+  lastModified: 637869228367871062
   FileSizes:
   - Name: 
     Value: 1250
@@ -214,7 +214,7 @@ MonoBehaviour:
   - {fileID: 3718739832558623359}
   StringsBanks:
   - {fileID: -154088352303201364}
-  cacheTime: 637869203909076090
+  cacheTime: 637869228367871062
   cacheVersion: 10
 --- !u!114 &3022548572943360535
 MonoBehaviour:
@@ -312,7 +312,7 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637869203909066118
+  lastModified: 637869228367831136
   FileSizes: []
   Exists: 1
 --- !u!114 &5314063910938100948
