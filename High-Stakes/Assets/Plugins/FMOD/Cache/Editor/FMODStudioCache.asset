@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7652489435635072260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantAttack
+  Guid:
+    Data1: -254832425
+    Data2: 1080540408
+    Data3: 142753720
+    Data4: -49454127
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &-7267495759905107262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +96,10 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637869198903109868
+  lastModified: 637869212035723652
   FileSizes:
   - Name: Desktop
-    Value: 1066
+    Value: 1250
   Exists: 1
 --- !u!114 &-5953256314929334542
 MonoBehaviour:
@@ -101,6 +128,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &-989093520798518003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestAttack
+  Guid:
+    Data1: -1904491867
+    Data2: 1326365919
+    Data3: 1681963692
+    Data4: 933692912
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1260
 --- !u!114 &-255914431361165891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,12 +205,16 @@ MonoBehaviour:
   - {fileID: -5953256314929334542}
   - {fileID: 3074495992225988132}
   - {fileID: -7052627132949471309}
+  - {fileID: 3456839617364907041}
+  - {fileID: 5193150094962626686}
+  - {fileID: -989093520798518003}
+  - {fileID: -7652489435635072260}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6174188379073054063}
   StringsBanks:
   - {fileID: -6177877544521632262}
-  cacheTime: 637869198903109868
+  cacheTime: 637869212035723652
   cacheVersion: 10
 --- !u!114 &3022548572943360535
 MonoBehaviour:
@@ -212,6 +270,60 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1500
+--- !u!114 &3456839617364907041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Vampire/VampireAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Vampire/VampireAttack
+  Guid:
+    Data1: -1352938423
+    Data2: 1120505471
+    Data3: 1399718065
+    Data4: -1324708781
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 900
+--- !u!114 &5193150094962626686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterAttack
+  Guid:
+    Data1: -1320007415
+    Data2: 1111030241
+    Data3: 1237931154
+    Data4: -94787183
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1550
 --- !u!114 &5314063910938100948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,8 +366,8 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637869198903069968
+  lastModified: 637869212035683759
   FileSizes:
   - Name: Desktop
-    Value: 3630080
+    Value: 3704448
   Exists: 1

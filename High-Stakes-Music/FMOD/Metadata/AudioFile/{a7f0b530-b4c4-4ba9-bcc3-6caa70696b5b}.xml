@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a7f0b530-b4c4-4ba9-bcc3-6caa70696b5b}">
+		<property name="assetPath">
+			<value>taylor-peasant-selections.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>9.6951927437641725</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2cfb548-48f0-4bb6-b9d9-7a5157642177}</destination>
+		</relationship>
+	</object>
+</objects>

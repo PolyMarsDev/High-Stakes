@@ -62,7 +62,8 @@ public abstract class LiveUnit : Unit {
 		Vector3 destination = CustomGrid.Instance.GridToWorld((Vector3Int) unit.pos);
 		Timer moving = AttackDuration;
 		moving.Start();
-		OnMove?.Invoke();
+		// OnMove?.Invoke();
+		OnCapture?.Invoke();
 		AnimState = State.Attack;
 		while (moving) {
 			Vector3 realPos = Vector3.Lerp(
@@ -76,7 +77,6 @@ public abstract class LiveUnit : Unit {
 			transform.position = realPos;
 			yield return null;
 		}
-		OnCapture?.Invoke();
 		AnimState = State.Idle;
 		this.pos = unit.pos;
         Destroy (unit.gameObject);
