@@ -33,6 +33,8 @@ public abstract class LiveUnit : Unit {
 	[Range(.1f, 2f), SerializeField] float AttackDuration = 1f;
 	public UnityEvent OnMove;
 	public UnityEvent OnCapture;
+	public UnityEvent OnDeath;
+	public GameObject Corpse;
 
 	public override IEnumerator MoveTo(Vector2Int pos) {
 		Vector3 originalPos = transform.position;
@@ -79,7 +81,16 @@ public abstract class LiveUnit : Unit {
 		}
 		AnimState = State.Idle;
 		this.pos = unit.pos;
-        Destroy (unit.gameObject);
+        unit.Kill();
 	}
-	
+
+	public override void Kill() {
+		OnDeath?.Invoke();
+		GameObject corpse = 
+			Instantiate<GameObject>(
+				Corpse, 
+				transform
+			);
+		base.Kill();
+	}
 }
