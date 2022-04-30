@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fog_mat
+  m_Name: fogBlue_mat
   m_Shader: {fileID: -6465566751694194690, guid: f12218a205e394c44a3b6084a6f50a79, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -35,11 +35,11 @@ Material:
     m_Floats:
     - Vector1_f905a9491dd9483e9c9cbc994aa7bc4b: -1.94
     - _ColorRange: 0
-    - _FogDensity: 0.217
+    - _FogDensity: 0.274
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _FogColor: {r: 0.24056602, g: 0.92405665, b: 1, a: 0.8313726}
+    - _FogColor: {r: 0.23921567, g: 0.64492047, b: 1, a: 0.8313726}
   m_BuildTextureStacks: []
 --- !u!114 &366359989599067673
 MonoBehaviour:
