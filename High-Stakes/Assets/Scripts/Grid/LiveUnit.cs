@@ -32,6 +32,9 @@ public abstract class LiveUnit : Unit {
 	[Range(.1f, 2f), SerializeField] float MoveDuration = 1f;
 	[Range(.1f, 2f), SerializeField] float AttackDuration = 1f;
 	public UnityEvent OnMove;
+	public UnityEvent OnCapture;
+	public UnityEvent OnDeath;
+	public GameObject Corpse;
 
 	public override IEnumerator MoveTo(Vector2Int pos) {
 		Vector3 originalPos = transform.position;
@@ -61,7 +64,8 @@ public abstract class LiveUnit : Unit {
 		Vector3 destination = CustomGrid.Instance.GridToWorld((Vector3Int) unit.pos);
 		Timer moving = AttackDuration;
 		moving.Start();
-		OnMove?.Invoke();
+		// OnMove?.Invoke();
+		OnCapture?.Invoke();
 		AnimState = State.Attack;
 		while (moving) {
 			Vector3 realPos = Vector3.Lerp(
@@ -77,7 +81,24 @@ public abstract class LiveUnit : Unit {
 		}
 		AnimState = State.Idle;
 		this.pos = unit.pos;
-        Destroy (unit.gameObject);
+        unit.Kill();
 	}
-	
+
+	public override void Kill() {
+		OnDeath?.Invoke();
+
+		Vector2 rpointIncircle = UnityEngine.Random.insideUnitCircle;
+		Vector3 corpseOffset = new Vector3(
+			rpointIncircle.x,
+			0,
+			rpointIncircle.y
+		) * .4f;
+		GameObject corpse = 
+			GameObject.Instantiate(
+				Corpse, 
+				transform.position + corpseOffset,
+				Quaternion.identity
+			);
+		base.Kill();
+	}
 }

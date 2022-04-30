@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 804924477}
   - component: {fileID: 804924476}
   - component: {fileID: -6748828651886533479}
+  - component: {fileID: 2684512611933041542}
   m_Layer: 0
   m_Name: Peasant
   m_TagString: Untagged
@@ -66,6 +67,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCapture:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2684512611933041542}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  Corpse: {fileID: 7152767926175607981, guid: 621754b071f508a45b934d3b8051173a, type: 3}
   movesVertically: 1
 --- !u!95 &804924477
 Animator:
@@ -122,6 +142,36 @@ MonoBehaviour:
       Data3: -1464535376
       Data4: 1922032425
     Path: event:/Sound Effects/Peasant/PeasantMove
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &2684512611933041542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609857030548801116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -254832425
+      Data2: 1080540408
+      Data3: 142753720
+      Data4: -49454127
+    Path: event:/Sound Effects/Peasant/PeasantAttack
   Event: 
   PlayEvent: 0
   StopEvent: 0

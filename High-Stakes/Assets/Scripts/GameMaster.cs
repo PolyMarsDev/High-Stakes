@@ -51,11 +51,22 @@ public class GameMaster : MonoBehaviour {
 		while (CustomGrid.Instance.Player && !WinConditionSatisfied()) {
 			if (state == State.PLAYER_TURN) 		yield return _PlayerTurn();
 			else if (state == State.ENEMY_TURN)		yield return _EnemyTurn();
+			if (Blood == 0) break;
 			state = State.PLAYER_TURN == state ? State.ENEMY_TURN : State.PLAYER_TURN;
 		}
-		if (WinConditionSatisfied()) SceneManager_.Instance.LoadScene(SceneManager_.Instance.GetActiveScene() + 1);
-		else SceneManager_.Instance.LoadScene(4);
+		if (WinConditionSatisfied()) yield return OnWin();
+		else yield return OnLose();
     }
+
+	public IEnumerator OnWin() {
+		yield return new WaitForSeconds(3f);
+		SceneManager_.Instance.LoadScene(SceneManager_.Instance.GetActiveScene() + 1);
+	}
+
+	public IEnumerator OnLose() {
+		yield return new WaitForSeconds(3f);
+		SceneManager_.Instance.LoadScene(4);
+	}
 
 	public bool WinConditionSatisfied() => Keys == KeysRequired && CustomGrid.Instance.Door && CustomGrid.Instance.Player 
 		&& player.pos == CustomGrid.Instance.Door.pos;
@@ -140,6 +151,11 @@ public class GameMaster : MonoBehaviour {
 		bool isCapture = CustomGrid.Instance.GetUnitAt(_selectedMove) is Enemy;
 		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
 		if (isCapture) 		Blood += CaptureBloodGain;
+		if (CustomGrid.Instance.HasKey(player.pos)) {
+			Keys++;
+			Key key = CustomGrid.Instance.GetKey(player.pos);
+			key.TriggerCollection();
+		}
 	}
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 

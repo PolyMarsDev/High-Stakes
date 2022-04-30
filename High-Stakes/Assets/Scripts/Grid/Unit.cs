@@ -2,12 +2,15 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.Events;
 
 public abstract class Unit : MonoBehaviour {
 	[HideInInspector]
 	public Vector2Int pos;
 
 	protected CustomGrid Grid => CustomGrid.Instance;
+
+	
 
 	void OnEnable() {
 		if (CustomGrid.Instance != null)
@@ -29,7 +32,7 @@ public abstract class Unit : MonoBehaviour {
 	public virtual IEnumerator Capture(Unit unit) {
 		transform.position = CustomGrid.Instance.GridToWorld((Vector3Int) unit.pos);
 		// Kills the game other obsject
-        Destroy (unit.gameObject);
+		unit.Kill();
 
 		// An : Not sure what the following 4 lines does
         // Removes this script instance from the game object
@@ -38,4 +41,6 @@ public abstract class Unit : MonoBehaviour {
         // Destroy(GetComponent<Rigidbody>());
 		yield return null;
 	}
+
+	public virtual void Kill() => Destroy(gameObject);
 }

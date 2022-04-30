@@ -18,6 +18,7 @@ public class CustomGrid : MonoBehaviour {
 	public Vector2Int Size;
 	public float YplaneOffset = 1f;
 	Unit[,] units;
+	Key[,] keys;
 
 	public Player Player {get; private set; }
 	public Door Door {get; private set; }
@@ -26,6 +27,7 @@ public class CustomGrid : MonoBehaviour {
 	// Prioritized being called before anything else
 	void Awake() {
 		units = new Unit[Size.x, Size.y];
+		keys = new Key[Size.x, Size.y];
 		for (int i = 0; i < Size.x; i++)
 		for (int j = 0; j < Size.y; j++)
 			units[i,j] = null;
@@ -33,7 +35,6 @@ public class CustomGrid : MonoBehaviour {
 		Enemies = new List<Enemy>();
 		Player = null;
 	}
-
 
 	bool HasWall(int x, int y, Direction dir) {
 		if (dir.IsHorizontal()) return leftWall.HasTile(new Vector3Int(x + (dir != Direction.LEFT ? 1 : 0), y, 0));
@@ -85,6 +86,7 @@ public class CustomGrid : MonoBehaviour {
 	public Unit GetUnitAt(Vector2Int pos) => GetUnitAt(pos.x, pos.y);
 
 	public void AddUnit(Vector2Int pos, Unit unit) {
+		if (!ValidSquare(pos)) return;
 		if (unit is Player) Player = unit as Player;
 		if (unit is Enemy) Enemies.Add(unit as Enemy);
 
@@ -92,15 +94,29 @@ public class CustomGrid : MonoBehaviour {
 		units[pos.x, pos.y] = unit;
 	}
 	public void RemoveUnit(Vector2Int pos) {
+		if (!ValidSquare(pos)) return;
 		if (units[pos.x, pos.y] is Enemy) 
 			Enemies.Remove(units[pos.x, pos.y] as Enemy);
 		if (units[pos.x, pos.y] is Player) 
 			Player = null;
 		units[pos.x, pos.y] = null;
 	} 
-	public void RemoveUnit(Unit unit) => RemoveUnit(unit.pos);
+	public void RemoveUnit(Unit unit) {
+		if (!ValidSquare(unit.pos)) return;
+		RemoveUnit(unit.pos);
+	}
 
 	public void RegisterDoor(Door door) => Door = door;
+	public void RegisterKey(Key key) { 
+		if (ValidSquare(key.pos)) {
+			keys[key.pos.x, key.pos.y] = key;
+		}
+	}
+	public Key GetKey(Vector2Int pos) {
+		if (ValidSquare(pos)) return keys[pos.x, pos.y];
+		return null;
+	}
+	public bool HasKey(Vector2Int pos) => GetKey(pos) != null;
 
 	public IEnumerator MoveUnit(Vector2Int src, Vector2Int dest) {
 		if (!ValidSquare(src)) throw new Exception(src + " not in range of grid of size" + Size);
