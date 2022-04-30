@@ -78,7 +78,7 @@ Material:
     - Vector1_54EAFABA: -1.19
     - Vector1_6713A4F2: -0.1
     - Vector1_6C1233FD: 1
-    - Vector1_854D61AC: 20.36
+    - Vector1_854D61AC: 31.8
     - Vector1_89EB340: 0.17
     - Vector1_CEC100B1: 1
     - Vector1_DE76AFDF: 0
@@ -87,7 +87,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _ColorRange: 0.501
+    - _ColorRange: 0.474
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
@@ -116,6 +116,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Multiply_Color: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8087499476721461291
