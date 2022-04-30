@@ -32,6 +32,7 @@ public abstract class LiveUnit : Unit {
 	[Range(.1f, 2f), SerializeField] float MoveDuration = 1f;
 	[Range(.1f, 2f), SerializeField] float AttackDuration = 1f;
 	public UnityEvent OnMove;
+	public UnityEvent OnCapture;
 
 	public override IEnumerator MoveTo(Vector2Int pos) {
 		Vector3 originalPos = transform.position;
@@ -75,6 +76,7 @@ public abstract class LiveUnit : Unit {
 			transform.position = realPos;
 			yield return null;
 		}
+		OnCapture?.Invoke();
 		AnimState = State.Idle;
 		this.pos = unit.pos;
         Destroy (unit.gameObject);

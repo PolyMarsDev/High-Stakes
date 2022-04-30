@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 450
+--- !u!114 &-7052627132949471309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Vampire/VampireMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Vampire/VampireMove
+  Guid:
+    Data1: 545438152
+    Data2: 1227837030
+    Data3: -1798088024
+    Data4: 1894319855
+  Banks:
+  - {fileID: 6174188379073054063}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
 --- !u!114 &-6177877544521632262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +69,10 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637863265711731617
+  lastModified: 637869198903109868
   FileSizes:
   - Name: Desktop
-    Value: 1016
+    Value: 1066
   Exists: 1
 --- !u!114 &-5953256314929334542
 MonoBehaviour:
@@ -123,12 +150,13 @@ MonoBehaviour:
   - {fileID: 5314063910938100948}
   - {fileID: -5953256314929334542}
   - {fileID: 3074495992225988132}
+  - {fileID: -7052627132949471309}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6174188379073054063}
   StringsBanks:
   - {fileID: -6177877544521632262}
-  cacheTime: 637863265711731617
+  cacheTime: 637869198903109868
   cacheVersion: 10
 --- !u!114 &3022548572943360535
 MonoBehaviour:
@@ -226,8 +254,8 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637863265711661520
+  lastModified: 637869198903069968
   FileSizes:
   - Name: Desktop
-    Value: 3517024
+    Value: 3630080
   Exists: 1
