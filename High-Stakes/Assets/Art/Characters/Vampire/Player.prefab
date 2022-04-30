@@ -113,6 +113,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  Corpse: {fileID: 7454490993318356229, guid: 7f42ccd2d3560854095a4254107eabec, type: 3}
 --- !u!95 &2712379179513728193
 Animator:
   serializedVersion: 4

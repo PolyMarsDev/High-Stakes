@@ -86,10 +86,18 @@ public abstract class LiveUnit : Unit {
 
 	public override void Kill() {
 		OnDeath?.Invoke();
+
+		Vector2 rpointIncircle = UnityEngine.Random.insideUnitCircle;
+		Vector3 corpseOffset = new Vector3(
+			rpointIncircle.x,
+			0,
+			rpointIncircle.y
+		) * .4f;
 		GameObject corpse = 
-			Instantiate<GameObject>(
+			GameObject.Instantiate(
 				Corpse, 
-				transform
+				transform.position + corpseOffset,
+				Quaternion.identity
 			);
 		base.Kill();
 	}

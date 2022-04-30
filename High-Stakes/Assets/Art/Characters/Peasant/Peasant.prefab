@@ -82,6 +82,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  Corpse: {fileID: 7152767926175607981, guid: 621754b071f508a45b934d3b8051173a, type: 3}
   movesVertically: 1
 --- !u!95 &804924477
 Animator:
