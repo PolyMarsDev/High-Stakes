@@ -21,5 +21,6 @@ public class Key : MonoBehaviour {
 	IEnumerator Collect() {
 		yield return null;
 		OnCollect?.Invoke();
+		CustomGrid.Instance?.RemoveKey(this);
 	}
 }

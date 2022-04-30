@@ -108,9 +108,11 @@ public class CustomGrid : MonoBehaviour {
 
 	public void RegisterDoor(Door door) => Door = door;
 	public void RegisterKey(Key key) { 
-		if (ValidSquare(key.pos)) {
-			keys[key.pos.x, key.pos.y] = key;
-		}
+		if (ValidSquare(key.pos)) keys[key.pos.x, key.pos.y] = key;
+	}
+
+	public void RemoveKey(Key key) {
+		if (ValidSquare(key.pos)) keys[key.pos.x, key.pos.y] = null;
 	}
 	public Key GetKey(Vector2Int pos) {
 		if (ValidSquare(pos)) return keys[pos.x, pos.y];
