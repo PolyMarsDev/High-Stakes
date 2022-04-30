@@ -140,6 +140,11 @@ public class GameMaster : MonoBehaviour {
 		bool isCapture = CustomGrid.Instance.GetUnitAt(_selectedMove) is Enemy;
 		yield return StartCoroutine(CustomGrid.Instance.MoveUnit(player.pos, _selectedMove));
 		if (isCapture) 		Blood += CaptureBloodGain;
+		if (CustomGrid.Instance.HasKey(player.pos)) {
+			Keys++;
+			Key key = CustomGrid.Instance.GetKey(player.pos);
+			key.TriggerCollection();
+		}
 	}
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
