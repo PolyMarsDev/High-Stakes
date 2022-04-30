@@ -2,12 +2,14 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20204 (121702), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
+[LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001B4FBA14D38 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000015C6E9F42A8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,140 +20,10 @@
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 141)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 141)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSound                     : filename = ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001B4FAEBF908 : node = 000001B3D972F400
-[LOG] SystemI::createSound                     : add node to async list : head = 000001B4DE157388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B4FAEBF908
-[LOG] SystemI::createSoundInternal             :     Create name='../High-Stakes-Music/FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3693440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11008
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001B3D972F510
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1800
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='kevin-vampire-selections', format=5, channels=2, frequency=48000, lengthbytes=111968, lengthpcm=963758, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.215189.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B4FAEBF908
-[LOG] SystemI::createSound                     : filename = ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001B4FAEBFE18 : node = 000001B3D972F2C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001B4DE157388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B4FAEBFE18
-[LOG] SystemI::createSoundInternal             :     Create name='../High-Stakes-Music/FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3693440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11008
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001B3D972F3D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ant-VHm-selections', format=5, channels=2, frequency=48000, lengthbytes=72096, lengthpcm=814379, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B4FAEBFE18
-[LOG] SoundI::release                          : kevin-vampire-selections (000001B4FAEBF908)
-[LOG] SoundI::release                          :     kevin-vampire-selections (000001B40A857C88)
-[LOG] SoundI::release                          :     kevin-vampire-selections (000001B4FAEBC668)
-[LOG] SystemI::createSound                     : filename = ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001B4FAEBBC48 : node = 000001B3D972F400
-[LOG] SystemI::createSound                     : add node to async list : head = 000001B4DE157388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B4FAEBBC48
-[LOG] SystemI::createSoundInternal             :     Create name='../High-Stakes-Music/FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3693440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11008
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001B3D972F510
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1800
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='kevin-vampire-selections', format=5, channels=2, frequency=48000, lengthbytes=111968, lengthpcm=963758, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.215189.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B4FAEBBC48
-[LOG] SoundI::release                          : ant-VHm-selections (000001B4FAEBFE18)
-[LOG] SoundI::release                          :     ant-VHm-selections (000001B40A855248)
-[LOG] SoundI::release                          :     ant-VHm-selections (000001B4FAEC0EF8)
-[LOG] SystemI::createSound                     : filename = ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001B4FAEBBFA8 : node = 000001B3D972F2C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001B4DE157388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B4FAEBBFA8
-[LOG] SystemI::createSoundInternal             :     Create name='../High-Stakes-Music/FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3693440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11008
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001B3D972F3D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ant-VHm-selections', format=5, channels=2, frequency=48000, lengthbytes=72096, lengthpcm=814379, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B4FAEBBFA8
-[LOG] SoundI::release                          : kevin-vampire-selections (000001B4FAEBBC48)
-[LOG] SoundI::release                          :     kevin-vampire-selections (000001B40A855588)
-[LOG] SoundI::release                          :     kevin-vampire-selections (000001B4FAEBF908)
-[LOG] SystemI::createSound                     : filename = ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001B4FAEC4D68 : node = 000001B3D972F680
-[LOG] SystemI::createSound                     : add node to async list : head = 000001B4DE157388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B4FAEC4D68
-[LOG] SystemI::createSoundInternal             :     Create name='../High-Stakes-Music/FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3693440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11008
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001B3D972F790
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1800
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='kevin-vampire-selections', format=5, channels=2, frequency=48000, lengthbytes=111968, lengthpcm=963758, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.215189.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B4FAEC4D68
-[LOG] SoundI::release                          : ant-VHm-selections (000001B4FAEBBFA8)
-[LOG] SoundI::release                          :     ant-VHm-selections (000001B40A857FC8)
-[LOG] SoundI::release                          :     ant-VHm-selections (000001B4FAEBC668)
-[LOG] SystemI::createSound                     : filename = ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001B4FAEBF908 : node = 000001B4B07D29B0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001B4DE157388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B4FAEBF908
-[LOG] SystemI::createSoundInternal             :     Create name='../High-Stakes-Music/FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3693440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11008
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001B4B07D2AC0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 5950
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ant-VHm-selections', format=5, channels=2, frequency=48000, lengthbytes=72096, lengthpcm=814379, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B4FAEBF908
-[LOG] SoundI::release                          : kevin-vampire-selections (000001B4FAEC4D68)
-[LOG] SoundI::release                          :     kevin-vampire-selections (000001B40A855588)
-[LOG] SoundI::release                          :     kevin-vampire-selections (000001B4FAEC7E58)
-[LOG] SoundI::release                          : ant-VHm-selections (000001B4FAEBF908)
-[LOG] SoundI::release                          :     ant-VHm-selections (000001B40A857128)
-[LOG] SoundI::release                          :     ant-VHm-selections (000001B4FAEBDC58)
-[LOG] SoundI::release                          : HS-Level-Proto2 (000001B4FAEC3C88)
-[LOG] SoundI::release                          :     HS-Level-Proto2 (000001B40A856DE8)
-[LOG] SoundI::release                          :     HS-Level-Proto2 (000001B4FAEC3FE8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 141)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 141)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 141)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
