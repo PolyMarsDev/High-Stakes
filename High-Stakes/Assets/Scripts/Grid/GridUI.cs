@@ -1,38 +1,61 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Utils;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GridUI : MonoBehaviour
 {
-    public Tilemap UIGrid;
 	public static GridUI Instance;
+
+	public Optional<Canvas> WorldCanvas;
 
 	void Awake() {
 		Instance = this;
+
+		if (!WorldCanvas.Enabled) WorldCanvas = new Optional<Canvas>(GetComponentInChildren<Canvas>());
+		if (WorldCanvas.Value == null) Debug.LogError("ReferenceError: A suitable canvas is not found to display UI");
 	}
 
-	public void addIndicator(Indicator indicator, Vector2Int pos) {
-		Tile tile = null;
-		if (indicator == Indicator.MOVABLE)	tile = movableIndicator;
-		addIndicator(tile, pos);
+	public GameObject AddIndicator(Indicator indicator, Vector3 pos) {
+		return AddIndicator(indicator.GetIndicatorPrefab(this), pos);
 	}
 
-    public void addIndicator(TileBase tile, Vector2Int pos) 
-    {
-        UIGrid.SetTile(new Vector3Int(pos.x, pos.y, 0), tile);
-    }
+	GameObject AddIndicator(GameObject prefab, Vector3 pos) {
+		// TODO: Use object pooling to optimize this, but probably not needed for small game
 
-    public void removeIndicator(Vector2Int pos) 
-    {
-        UIGrid.SetTile(new Vector3Int(pos.x, pos.y, 0), null);
-    }
+		GameObject obj = GameObject.Instantiate(prefab, pos, Quaternion.identity);
+		if (WorldCanvas.Value) {
+			obj.transform.SetParent(WorldCanvas.Value.transform, false);
+			obj.transform.localRotation = Quaternion.identity;
+		}
+
+		return obj;
+	}
+
+	public static Vector3 GridToUI(Vector2Int pos) {
+		return new Vector3(
+			pos.x + .5f,
+			pos.y + .5f,
+			0
+		);
+	}
 
 	public enum Indicator {
 		MOVABLE
 	}
+	public GameObject MoveableIndicatorPrefab;
+}
 
-	public Tile movableIndicator; 
+public static class IndicatorExtension {
+	public static GameObject GetIndicatorPrefab(this GridUI.Indicator ind, GridUI UI) {
+		switch (ind) {
+			case GridUI.Indicator.MOVABLE:
+				return UI.MoveableIndicatorPrefab;
+		}
+		return null;
+	}
 }
