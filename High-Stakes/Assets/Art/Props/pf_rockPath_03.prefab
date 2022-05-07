@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 836417418403158574}
   - component: {fileID: 326116978195902473}
   - component: {fileID: 1587751768994253716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4960669696517145587}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pf_rockPath_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2537545407847987911}
   - component: {fileID: 7812288221130589940}
   - component: {fileID: 9087710526227930629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
