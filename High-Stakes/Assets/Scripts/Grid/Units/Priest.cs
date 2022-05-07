@@ -57,4 +57,38 @@ public class Priest : Enemy {
 		}
 		return adjacents;
 	}
+
+	public override List<Vector2Int> GetVisionPositions() {
+		List<Vector2Int> positions = new List<Vector2Int>();
+
+		int[] dx = {1, -1, 1, -1};
+		int[] dy = {1, 1, -1, -1};
+		
+		for (int k = 0; k < 4; k++) {
+			Vector2Int dir = new Vector2Int(dx[k], dy[k]);
+			Vector2Int cur = pos;
+			while (CustomGrid.Instance.ValidSquare(cur)) {
+				cur += dir;
+				if (CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
+				else break;
+			}
+		}
+
+		return positions;
+	}
+	public override List<Vector2Int> GetAttackablePositions() {
+		List<Vector2Int> positions = new List<Vector2Int>();
+		
+		int[] dx = {1, -1, 1, -1};
+		int[] dy = {1, 1, -1, -1};
+
+		for (int k = 0; k < 4; k++) {
+			Vector2Int dir = new Vector2Int(dx[k], dy[k]);
+			Vector2Int cur = pos + dir;
+			if (CustomGrid.Instance.ValidSquare(cur) && CustomGrid.Instance.CanMoveTo(cur)) 
+				positions.Add(cur);
+		}
+
+		return positions;
+	}
 }

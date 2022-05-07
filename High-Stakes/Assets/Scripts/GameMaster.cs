@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UI;
 
 public class GameMaster : MonoBehaviour {
 	public static GameMaster Instance;
@@ -132,12 +133,16 @@ public class GameMaster : MonoBehaviour {
 	IEnumerator _PlayerTurn() {
 		CurrentUnit = player;
 		PlayerMoveIndicator Indicator = FindObjectOfType<PlayerMoveIndicator>(); // Inefficient as hell so fix if needed
+		PlayerCursorTracker CursorTracker = PlayerCursorTracker.Instance;
+		EnemyInfoDisplayTracker DisplayTracker = EnemyInfoDisplayTracker.Instance;
 
 		if (Indicator) {
 			Indicator.Active = true;
 			// check not needed 
 			if (Indicator.mode != PlayerMoveIndicator.Mode.Normal) Indicator.mode = PlayerMoveIndicator.Mode.Normal;
 		}
+		if (CursorTracker) CursorTracker.Active = true;
+		if (DisplayTracker) DisplayTracker.Active = true;
 
 		// Render UI
 		_specialMove = false;
@@ -153,6 +158,9 @@ public class GameMaster : MonoBehaviour {
 			yield return null;
 
 		if (Indicator) Indicator.Active = false;
+		if (CursorTracker) CursorTracker.Active = false;
+		if (DisplayTracker) DisplayTracker.Active = false;
+
 		foreach (GameObject obj in _activeUIIndicators_PossibleMoves)
 			Destroy(obj);
 		_activeUIIndicators_PossibleMoves.Clear();

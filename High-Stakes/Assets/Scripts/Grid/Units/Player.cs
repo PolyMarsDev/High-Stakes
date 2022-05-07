@@ -35,5 +35,4 @@ public class Player : LiveUnit {
 		}
 		return adjacents;
 	}
-
 }
