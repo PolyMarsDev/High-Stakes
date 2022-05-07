@@ -9,6 +9,7 @@ public class SceneManager_ : MonoBehaviour
 {
 
     public static SceneManager_ Instance;
+	public static int lastSceneIndex = -1;
     public Image overlay;
 
     public void Awake()
@@ -21,6 +22,9 @@ public class SceneManager_ : MonoBehaviour
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1.0f);
         StartCoroutine(FadeIn());
     }
+	void OnDestroy() {
+		lastSceneIndex = GetActiveScene();
+	}
     public void LoadScene(int index)
     {
         StartCoroutine(FadeToScene(index));
@@ -52,4 +56,8 @@ public class SceneManager_ : MonoBehaviour
             yield return new WaitForSeconds(.01f);
         }
     }
+
+	public void LoadLastScene() {
+		LoadScene(lastSceneIndex);
+	}
 }

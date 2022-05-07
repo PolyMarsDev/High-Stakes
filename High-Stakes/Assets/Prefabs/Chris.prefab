@@ -56,6 +56,11 @@ MonoBehaviour:
   LevelClear: {fileID: 7191018566021076582, guid: d07933383d912e344865cf2eb60cc4c9, type: 3}
   GameOver: {fileID: 8689214089048146573, guid: 17ea672a9a691f94a9f9a6c70e15d812, type: 3}
   LevelMusic: {fileID: 3504010666368273408}
+  GameOverScene:
+    Scene: {fileID: 102900000, guid: a6231df14b37c5d47a18e83d0abbe715, type: 3}
+    SceneName: GameOver
+    sceneIndex: 6
+    sceneEnabled: 1
 --- !u!114 &157838987053311626
 MonoBehaviour:
   m_ObjectHideFlags: 0
