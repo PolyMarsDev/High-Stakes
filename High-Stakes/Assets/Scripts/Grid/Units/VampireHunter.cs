@@ -68,7 +68,7 @@ public class VampireHunter : Enemy {
 			Vector2Int cur = pos;
 			while (CustomGrid.Instance.ValidSquare(cur)) {
 				cur += dir;
-				if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(dir);
+				if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
 				else break;
 			}
 		}
