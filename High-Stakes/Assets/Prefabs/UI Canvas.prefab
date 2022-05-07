@@ -839,8 +839,71 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reset
       objectReference: {fileID: 0}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5069686083139439902}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566269844034100763, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+--- !u!1 &8809715460728526250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7566269844034100757, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
+  m_PrefabInstance: {fileID: 1387864998782077887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5069686083139439902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8809715460728526250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2012182763
+      Data2: 1164745913
+      Data3: -1452402814
+      Data4: -1501740189
+    Path: event:/Sound Effects/UI/UIClick
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!224 &8809715460728526251 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7566269844034100756, guid: 63dbd019c75687842a0afb9d1461a628, type: 3}
