@@ -11,7 +11,8 @@ public class GameMaster : MonoBehaviour {
 		ENEMY_TURN
 	}
 
-	State state;
+	public State TurnState;
+	public Unit CurrentUnit;
 	Player player;
 
 	[Range(1, 30)]
@@ -41,18 +42,18 @@ public class GameMaster : MonoBehaviour {
 
 	// Please find a better name for this method
 	public IEnumerator Gameloop() {
-		state = State.BEGIN;
+		TurnState = State.BEGIN;
 
 		// Run some initialization code
-		state = State.PLAYER_TURN;
+		TurnState = State.PLAYER_TURN;
 		Keys = 0;
 		Blood = StartingBlood;
 
 		while (CustomGrid.Instance.Player && !WinConditionSatisfied()) {
-			if (state == State.PLAYER_TURN) 		yield return _PlayerTurn();
-			else if (state == State.ENEMY_TURN)		yield return _EnemyTurn();
+			if (TurnState == State.PLAYER_TURN) 		yield return _PlayerTurn();
+			else if (TurnState == State.ENEMY_TURN)		yield return _EnemyTurn();
 			if (Blood == 0) break;
-			state = State.PLAYER_TURN == state ? State.ENEMY_TURN : State.PLAYER_TURN;
+			TurnState = State.PLAYER_TURN == TurnState ? State.ENEMY_TURN : State.PLAYER_TURN;
 		}
 		if (WinConditionSatisfied()) yield return OnWin();
 		else yield return OnLose();
@@ -73,7 +74,8 @@ public class GameMaster : MonoBehaviour {
 
 	bool _moveSelected = false;
 	bool _specialMove = false;
-	List<Vector2Int> _possibleMoveLocations;
+	List<Vector2Int> _possibleMoveLocations = new List<Vector2Int>();
+	List<GameObject> _activeUIIndicators_PossibleMoves = new List<GameObject>();
 	Vector2Int _selectedMove;
 
 	void OnMouseDown() {
@@ -84,7 +86,7 @@ public class GameMaster : MonoBehaviour {
 		// else if (click on button and _specialMove) {
 		//	this.switchIndicators();
 		// }
-		if (state == State.PLAYER_TURN && !_moveSelected) {
+		if (TurnState == State.PLAYER_TURN && !_moveSelected) {
 			Vector2Int pos = CustomGrid.Instance.GetMouseGridPosition();
 			if (_possibleMoveLocations.Contains(pos)) {
 				_moveSelected = true;
@@ -96,12 +98,17 @@ public class GameMaster : MonoBehaviour {
 		if (_specialMove == toSpecial) return;
 
 		// refractor a bit
-		foreach (Vector2Int pos in _possibleMoveLocations)
-			GridUI.Instance.removeIndicator(pos);
+		foreach (GameObject obj in _activeUIIndicators_PossibleMoves)
+			Destroy(obj);
+		_activeUIIndicators_PossibleMoves.Clear();
+
 		if (toSpecial) 	_possibleMoveLocations = player.GetSpecialMoveTo();
 		else			_possibleMoveLocations = player.GetMoveTo();
 		foreach (Vector2Int pos in _possibleMoveLocations)
-			GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+			_activeUIIndicators_PossibleMoves.Add(
+				GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
+				- Vector3.forward * .1f) // this is neccessary to prevent z-fighting
+			);
 
 		// if (!_specialMove) {
 		// 	_possibleMoveLocations = player.GetSpecialMoveTo();
@@ -123,6 +130,7 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	IEnumerator _PlayerTurn() {
+		CurrentUnit = player;
 		PlayerMoveIndicator Indicator = FindObjectOfType<PlayerMoveIndicator>(); // Inefficient as hell so fix if needed
 
 		if (Indicator) {
@@ -135,15 +143,19 @@ public class GameMaster : MonoBehaviour {
 		_specialMove = false;
 		_possibleMoveLocations = player.GetMoveTo();
 		foreach (Vector2Int pos in _possibleMoveLocations)
-			GridUI.Instance.addIndicator(GridUI.Indicator.MOVABLE, pos);
+			_activeUIIndicators_PossibleMoves.Add(
+				GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
+				- Vector3.forward * .1f) // this is neccessary to prevent z-fighting
+			);
 		_moveSelected = false;
 
 		while (!_moveSelected) 
 			yield return null;
 
 		if (Indicator) Indicator.Active = false;
-		foreach (Vector2Int pos in _possibleMoveLocations)
-			GridUI.Instance.removeIndicator(pos);
+		foreach (GameObject obj in _activeUIIndicators_PossibleMoves)
+			Destroy(obj);
+		_activeUIIndicators_PossibleMoves.Clear();
 
 		if (!_specialMove)	Blood -= NormalBloodCost;
 		else				Blood -= SpecialBloodCost;
@@ -160,6 +172,8 @@ public class GameMaster : MonoBehaviour {
 	IEnumerator _EnemyTurn() {
 		List<Enemy> Enemies = new List<Enemy>(CustomGrid.Instance.Enemies); 
 		foreach (Enemy enemy in Enemies) {
+			CurrentUnit = enemy;
+
 			Vector2Int nxt = enemy.GetBestMove();
 			if (nxt != enemy.pos) yield return StartCoroutine(CustomGrid.Instance.MoveUnit(enemy.pos, nxt));
 		}
