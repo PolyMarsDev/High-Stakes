@@ -76,7 +76,8 @@ public class CustomGrid : MonoBehaviour {
 	}
 
 	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && !HasUnitAt(x, y) 
-		|| (GetUnitAt(x,y) is Obstacle) && (GetUnitAt(x,y) as Obstacle).IsTransparent; // TODO: Change after implementing obstacles;
+		|| (GetUnitAt(x,y) is Obstacle) && (GetUnitAt(x,y) as Obstacle).IsTransparent
+		|| (GetUnitAt(x,y) is Player); // TODO: Change after implementing obstacles;
 	public bool CanSeeThrough(Vector2Int pos) => CanSeeThrough(pos.x, pos.y);
 
 	public bool HasUnitAt(int x, int y) => ValidSquare(x, y) ? units[x,y] : false;

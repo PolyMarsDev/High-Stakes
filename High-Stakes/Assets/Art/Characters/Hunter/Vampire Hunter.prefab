@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1724599584}
   - component: {fileID: 1045221564833669074}
   - component: {fileID: 4494671280054691210}
+  - component: {fileID: 4074098101124154661}
+  - component: {fileID: 1998704026099332088}
   m_Layer: 0
   m_Name: Vampire Hunter
   m_TagString: Untagged
@@ -67,6 +69,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1998704026099332088}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCapture:
     m_PersistentCalls:
       m_Calls:
@@ -84,7 +98,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4074098101124154661}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Corpse: {fileID: 4882817237773999852, guid: 73297baa65db2c24ba7818383d232b60, type: 3}
   VisionRange: 5
 --- !u!95 &1724599585
@@ -137,11 +163,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 359454363
-      Data2: 1074968235
-      Data3: -62354289
-      Data4: -341718139
-    Path: event:/Sound Effects/Hunter/MaleHunterMove
+      Data1: 574924740
+      Data2: 1263778295
+      Data3: -264153424
+      Data4: 1075233375
+    Path: event:/Sound Effects/Footsteps
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -172,6 +198,66 @@ MonoBehaviour:
       Data3: 1237931154
       Data4: -94787183
     Path: event:/Sound Effects/Hunter/MaleHunterAttack
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &4074098101124154661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885663391184070147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2008408345
+      Data2: 1168623914
+      Data3: 215739799
+      Data4: -1049429263
+    Path: event:/Sound Effects/Hunter/MaleHunterDeath
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1998704026099332088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885663391184070147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 359454363
+      Data2: 1074968235
+      Data3: -62354289
+      Data4: -341718139
+    Path: event:/Sound Effects/Hunter/MaleHunterMove
   Event: 
   PlayEvent: 0
   StopEvent: 0

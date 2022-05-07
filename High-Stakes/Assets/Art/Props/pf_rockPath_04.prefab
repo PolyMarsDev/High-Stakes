@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 6
   m_Name: pf_rockPath_04
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,8 +44,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 1.414
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11a4879766439a84697216187ae779d9, type: 3}
       propertyPath: m_LocalRotation.w

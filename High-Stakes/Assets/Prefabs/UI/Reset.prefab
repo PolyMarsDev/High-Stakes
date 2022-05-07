@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7566269844034100761}
   - component: {fileID: 7566269844034100762}
   - component: {fileID: 7566269844034100763}
+  - component: {fileID: 8954968020848106248}
   m_Layer: 5
   m_Name: Reset
   m_TagString: Untagged
@@ -121,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager_, Assembly-CSharp
-        m_MethodName: ReloadScene
+      - m_Target: {fileID: 8954968020848106248}
+        m_TargetAssemblyTypeName: ResetButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -133,3 +134,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8954968020848106248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566269844034100757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c6dea0bff52d148972c237917e4d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

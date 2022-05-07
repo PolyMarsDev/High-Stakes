@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2712379179513728206}
   - component: {fileID: 1201597959642584047}
   - component: {fileID: 6222728247192508958}
+  - component: {fileID: -7951695990443859259}
+  - component: {fileID: -6717004811338100515}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -98,6 +100,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -6717004811338100515}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCapture:
     m_PersistentCalls:
       m_Calls:
@@ -115,7 +129,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -7951695990443859259}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Corpse: {fileID: 7454490993318356229, guid: 7f42ccd2d3560854095a4254107eabec, type: 3}
 --- !u!95 &2712379179513728193
 Animator:
@@ -167,11 +193,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 545438152
-      Data2: 1227837030
-      Data3: -1798088024
-      Data4: 1894319855
-    Path: event:/Sound Effects/Vampire/VampireMove
+      Data1: 574924740
+      Data2: 1263778295
+      Data3: -264153424
+      Data4: 1075233375
+    Path: event:/Sound Effects/Footsteps
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -202,6 +228,66 @@ MonoBehaviour:
       Data3: 1399718065
       Data4: -1324708781
     Path: event:/Sound Effects/Vampire/VampireAttack
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &-7951695990443859259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712379179513728197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 724060009
+      Data2: 1089647185
+      Data3: 499749298
+      Data4: -2044372410
+    Path: event:/Sound Effects/Vampire/VampireDeath
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &-6717004811338100515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712379179513728197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 545438152
+      Data2: 1227837030
+      Data3: -1798088024
+      Data4: 1894319855
+    Path: event:/Sound Effects/Vampire/VampireMove
   Event: 
   PlayEvent: 0
   StopEvent: 0
