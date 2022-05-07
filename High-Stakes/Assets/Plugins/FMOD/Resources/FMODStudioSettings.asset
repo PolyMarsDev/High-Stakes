@@ -1,5 +1,9 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 88e15c0 (!)
 --- !u!114 &-8996883915711465286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +465,12 @@ MonoBehaviour:
   displaySortOrder: 0
   childIdentifiers: []
 --- !u!114 &777215382582524339
+<<<<<<< HEAD
+=======
+=======
+--- !u!114 &-9003500911156465358
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+>>>>>>> parent of 88e15c0 (!)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

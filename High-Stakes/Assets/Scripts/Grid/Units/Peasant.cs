@@ -61,7 +61,15 @@ public class Peasant : Enemy {
 				Vector2Int cur = pos;
 				while (CustomGrid.Instance.ValidSquare(cur)) {
 					cur += dir;
+<<<<<<< HEAD
 					if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(dir);
+=======
+<<<<<<< HEAD
+					if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(dir);
+=======
+					if (CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+>>>>>>> parent of 88e15c0 (!)
 					else break;
 				}
 			}
