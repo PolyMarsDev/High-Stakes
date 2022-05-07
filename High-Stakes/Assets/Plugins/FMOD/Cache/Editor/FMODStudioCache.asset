@@ -1,33 +1,9 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8144943757329451494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Hunter/MaleHunterMove
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Hunter/MaleHunterMove
-  Guid:
-    Data1: 359454363
-    Data2: 1074968235
-    Data3: -62354289
-    Data4: -341718139
-  Banks:
-  - {fileID: -2784177119853695516}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1000
---- !u!114 &-7573648242072626259
+=======
+--- !u!114 &-9109580197341156989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +22,7 @@ MonoBehaviour:
     Data3: 1681963692
     Data4: 933692912
   Banks:
-  - {fileID: -2784177119853695516}
+  - {fileID: 1448721321655696681}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -54,34 +30,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1260
---- !u!114 &-6509192573341950735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Peasant/PeasantAttack
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Peasant/PeasantAttack
-  Guid:
-    Data1: -254832425
-    Data2: 1080540408
-    Data3: 142753720
-    Data4: -49454127
-  Banks:
-  - {fileID: -2784177119853695516}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1500
---- !u!114 &-6277228841777742393
+--- !u!114 &-8655520677773461412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,6 +49,836 @@ MonoBehaviour:
     Data3: 517132941
     Data4: 667518074
   Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 141000
+--- !u!114 &-7267495759905107262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantMove
+  Guid:
+    Data1: -241796353
+    Data2: 1106625575
+    Data3: -1464535376
+    Data4: 1922032425
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 450
+--- !u!114 &-6748033987943791357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestMove
+  Guid:
+    Data1: -1314120133
+    Data2: 1259112634
+    Data3: -968906063
+    Data4: -507115957
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &-5953256314929334542
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterMove
+  Guid:
+    Data1: 359454363
+    Data2: 1074968235
+    Data3: -62354289
+    Data4: -341718139
+  Banks:
+<<<<<<< HEAD
+  - {fileID: -2784177119853695516}
+=======
+  - {fileID: 1448721321655696681}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+<<<<<<< HEAD
+--- !u!114 &-7573648242072626259
+=======
+--- !u!114 &-4232363940089932294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../High-Stakes-FmodBuild/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 637875247685204248
+  FileSizes:
+  - Name: 
+    Value: 4599552
+  Exists: 1
+--- !u!114 &-3352856692744459713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/UI/Transform
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/UI/Transform
+  Guid:
+    Data1: -845946985
+    Data2: 1320015335
+    Data3: -1842324067
+    Data4: 1661421496
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2751
+--- !u!114 &-2627123734365897039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level
+  m_EditorClassIdentifier: 
+  Path: event:/Level
+  Guid:
+    Data1: -461976317
+    Data2: 1277410837
+    Data3: -1822332264
+    Data4: 1402479605
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 85400
+--- !u!114 &-2509731026608069454
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestAttack
+  Guid:
+    Data1: -1904491867
+    Data2: 1326365919
+    Data3: 1681963692
+    Data4: 933692912
+  Banks:
+<<<<<<< HEAD
+  - {fileID: -2784177119853695516}
+=======
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 141000
+--- !u!114 &-1730135876769117061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantAttack
+  Guid:
+    Data1: -254832425
+    Data2: 1080540408
+    Data3: 142753720
+    Data4: -49454127
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &-1502646760081609412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantDeath
+  Guid:
+    Data1: 1948103747
+    Data2: 1173118902
+    Data3: 2122446505
+    Data4: -2090851313
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1895
+--- !u!114 &-1363806373314723817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterMove
+  Guid:
+    Data1: 359454363
+    Data2: 1074968235
+    Data3: -62354289
+    Data4: -341718139
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-1357160566104484258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestDeath
+  Guid:
+    Data1: 295390579
+    Data2: 1297613457
+    Data3: -828510053
+    Data4: -1003944070
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1570
+--- !u!114 &-1289918312155451754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterAttack
+  Guid:
+    Data1: -1320007415
+    Data2: 1111030241
+    Data3: 1237931154
+    Data4: -94787183
+  Banks:
+  - {fileID: 1448721321655696681}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+<<<<<<< HEAD
+  Length: 1260
+--- !u!114 &-6509192573341950735
+=======
+  Length: 1550
+--- !u!114 &-1110497040418980651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/MainMenu
+  Guid:
+    Data1: -1818966450
+    Data2: 1104871852
+    Data3: 2005609659
+    Data4: -115941252
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 62450
+--- !u!114 &-610707618762319948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GameOver
+  m_EditorClassIdentifier: 
+  Path: event:/GameOver
+  Guid:
+    Data1: -1906446164
+    Data2: 1167902845
+    Data3: -394745193
+    Data4: 2010604404
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9148
+--- !u!114 &-407931233716260360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Vampire/VampireMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Vampire/VampireMove
+  Guid:
+    Data1: 545438152
+    Data2: 1227837030
+    Data3: -1798088024
+    Data4: 1894319855
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &-255914431361165891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level
+  m_EditorClassIdentifier: 
+  Path: event:/Level
+  Guid:
+    Data1: -461976317
+    Data2: 1277410837
+    Data3: -1822332264
+    Data4: 1402479605
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 85400
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 2280908328588058401}
+  - {fileID: -4232363940089932294}
+  EditorEvents:
+  - {fileID: -2627123734365897039}
+  - {fileID: 3803534187324158100}
+  - {fileID: -6748033987943791357}
+  - {fileID: 5876970613958796372}
+  - {fileID: 1591975565664326307}
+  - {fileID: -1110497040418980651}
+  - {fileID: -8655520677773461412}
+  - {fileID: 5825458585499066685}
+  - {fileID: -1357160566104484258}
+  - {fileID: -3352856692744459713}
+  - {fileID: 2187749095855834013}
+  - {fileID: -1363806373314723817}
+  - {fileID: 8250292767692817634}
+  - {fileID: -610707618762319948}
+  - {fileID: 3065067861288829023}
+  - {fileID: -1730135876769117061}
+  - {fileID: 5350597856366133921}
+  - {fileID: 6577778317116187271}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -4232363940089932294}
+  StringsBanks:
+  - {fileID: 2280908328588058401}
+  cacheTime: 637875247685434408
+  cacheVersion: 10
+--- !u!114 &1448721321655696681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../High-Stakes-FmodBuild/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 637875282702467389
+  FileSizes:
+  - Name: 
+    Value: 4599552
+  Exists: 1
+--- !u!114 &1591975565664326307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Vampire/VampireAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Vampire/VampireAttack
+  Guid:
+    Data1: -1352938423
+    Data2: 1120505471
+    Data3: 1399718065
+    Data4: -1324708781
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 900
+--- !u!114 &1645759122452199751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LevelClear
+  m_EditorClassIdentifier: 
+  Path: event:/LevelClear
+  Guid:
+    Data1: 677519769
+    Data2: 1250221762
+    Data3: -313608561
+    Data4: 2027088471
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 44000
+--- !u!114 &1842727855410575636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/UI/Transform
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/UI/Transform
+  Guid:
+    Data1: -845946985
+    Data2: 1320015335
+    Data3: -1842324067
+    Data4: 1661421496
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2751
+--- !u!114 &2187749095855834013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LevelClear
+  m_EditorClassIdentifier: 
+  Path: event:/LevelClear
+  Guid:
+    Data1: 677519769
+    Data2: 1250221762
+    Data3: -313608561
+    Data4: 2027088471
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 44000
+--- !u!114 &2280908328588058401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../High-Stakes-FmodBuild/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637875247685434408
+  FileSizes:
+  - Name: 
+    Value: 1528
+  Exists: 1
+--- !u!114 &3022548572943360535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/MainMenu
+  Guid:
+    Data1: -1818966450
+    Data2: 1104871852
+    Data3: 2005609659
+    Data4: -115941252
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 62450
+--- !u!114 &3065067861288829023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Vampire/VampireMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Vampire/VampireMove
+  Guid:
+    Data1: 545438152
+    Data2: 1227837030
+    Data3: -1798088024
+    Data4: 1894319855
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &3074495992225988132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestMove
+  Guid:
+    Data1: -1314120133
+    Data2: 1259112634
+    Data3: -968906063
+    Data4: -507115957
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &3532318882387983038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestDeath
+  Guid:
+    Data1: 295390579
+    Data2: 1297613457
+    Data3: -828510053
+    Data4: -1003944070
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1570
+--- !u!114 &3575705581801806401
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantAttack
+  Guid:
+    Data1: -254832425
+    Data2: 1080540408
+    Data3: 142753720
+    Data4: -49454127
+  Banks:
+<<<<<<< HEAD
+  - {fileID: -2784177119853695516}
+=======
+  - {fileID: 1448721321655696681}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+<<<<<<< HEAD
+--- !u!114 &-6277228841777742393
+=======
+--- !u!114 &3803534187324158100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Hunter/MaleHunterAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterAttack
+  Guid:
+    Data1: -1320007415
+    Data2: 1111030241
+    Data3: 1237931154
+    Data4: -94787183
+  Banks:
+  - {fileID: -4232363940089932294}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1550
+--- !u!114 &4816912047809038993
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background
+  m_EditorClassIdentifier: 
+  Path: event:/Background
+  Guid:
+    Data1: 659942247
+    Data2: 1111720919
+    Data3: 517132941
+    Data4: 667518074
+  Banks:
+<<<<<<< HEAD
   - {fileID: -2784177119853695516}
   IsStream: 1
   Is3D: 0
@@ -128,6 +907,9 @@ MonoBehaviour:
     Data4: -507115957
   Banks:
   - {fileID: -2784177119853695516}
+=======
+  - {fileID: 1448721321655696681}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -181,7 +963,11 @@ MonoBehaviour:
     Data3: 215739799
     Data4: -1049429263
   Banks:
+<<<<<<< HEAD
   - {fileID: -2784177119853695516}
+=======
+  - {fileID: 1448721321655696681}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -189,6 +975,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1966
+<<<<<<< HEAD
 --- !u!114 &-2784177119853695516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +997,9 @@ MonoBehaviour:
     Value: 4599552
   Exists: 1
 --- !u!114 &-609461688889867617
+=======
+--- !u!114 &5350597856366133921
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,6 +1009,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/LevelClear
   m_EditorClassIdentifier: 
   Path: event:/LevelClear
@@ -229,12 +1020,25 @@ MonoBehaviour:
     Data4: 2027088471
   Banks:
   - {fileID: -2784177119853695516}
+=======
+  m_Name: event:/Sound Effects/Hunter/MaleHunterDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Hunter/MaleHunterDeath
+  Guid:
+    Data1: -2008408345
+    Data2: 1168623914
+    Data3: 215739799
+    Data4: -1049429263
+  Banks:
+  - {fileID: -4232363940089932294}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 44000
 --- !u!114 &-257801183866537013
 MonoBehaviour:
@@ -305,6 +1109,10 @@ MonoBehaviour:
   cacheTime: 637875288629415746
   cacheVersion: 10
 --- !u!114 &252486566631328651
+=======
+  Length: 1966
+--- !u!114 &5825458585499066685
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,7 +1131,11 @@ MonoBehaviour:
     Data3: 499749298
     Data4: -2044372410
   Banks:
+<<<<<<< HEAD
   - {fileID: -2784177119853695516}
+=======
+  - {fileID: -4232363940089932294}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -331,7 +1143,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1300
+<<<<<<< HEAD
 --- !u!114 &2662286405608912760
+=======
+--- !u!114 &5876970613958796372
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -341,6 +1157,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/MainMenu
   m_EditorClassIdentifier: 
   Path: event:/MainMenu
@@ -425,14 +1242,58 @@ MonoBehaviour:
     Data4: 1922032425
   Banks:
   - {fileID: -2784177119853695516}
+=======
+  m_Name: event:/Sound Effects/Peasant/PeasantDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantDeath
+  Guid:
+    Data1: 1948103747
+    Data2: 1173118902
+    Data3: 2122446505
+    Data4: -2090851313
+  Banks:
+  - {fileID: -4232363940089932294}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 450
 --- !u!114 &4939608433734567025
+=======
+  Length: 1895
+--- !u!114 &6498342241593592163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GameOver
+  m_EditorClassIdentifier: 
+  Path: event:/GameOver
+  Guid:
+    Data1: -1906446164
+    Data2: 1167902845
+    Data3: -394745193
+    Data4: 2010604404
+  Banks:
+  - {fileID: 1448721321655696681}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9148
+--- !u!114 &6574143154406061810
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,7 +1312,11 @@ MonoBehaviour:
     Data3: 1399718065
     Data4: -1324708781
   Banks:
+<<<<<<< HEAD
   - {fileID: -2784177119853695516}
+=======
+  - {fileID: 1448721321655696681}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -459,7 +1324,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 900
+<<<<<<< HEAD
 --- !u!114 &5183250833869793088
+=======
+--- !u!114 &6577778317116187271
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,6 +1338,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Sound Effects/UI/Transform
   m_EditorClassIdentifier: 
   Path: event:/Sound Effects/UI/Transform
@@ -479,14 +1349,51 @@ MonoBehaviour:
     Data4: 1661421496
   Banks:
   - {fileID: -2784177119853695516}
+=======
+  m_Name: event:/Sound Effects/Peasant/PeasantMove
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantMove
+  Guid:
+    Data1: -241796353
+    Data2: 1106625575
+    Data3: -1464535376
+    Data4: 1922032425
+  Banks:
+  - {fileID: -4232363940089932294}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 2751
 --- !u!114 &6511282486302074344
+=======
+  Length: 450
+--- !u!114 &7076460489903688799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../High-Stakes-FmodBuild/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637875282702496956
+  FileSizes:
+  - Name: 
+    Value: 1528
+  Exists: 1
+--- !u!114 &8250292767692817634
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,6 +1403,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Sound Effects/Peasant/PeasantDeath
   m_EditorClassIdentifier: 
   Path: event:/Sound Effects/Peasant/PeasantDeath
@@ -533,12 +1441,25 @@ MonoBehaviour:
     Data4: -1003944070
   Banks:
   - {fileID: -2784177119853695516}
+=======
+  m_Name: event:/Sound Effects/Priest/PriestAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestAttack
+  Guid:
+    Data1: -1904491867
+    Data2: 1326365919
+    Data3: 1681963692
+    Data4: 933692912
+  Banks:
+  - {fileID: -4232363940089932294}
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 1570
 --- !u!114 &9109319027693482122
 MonoBehaviour:
@@ -567,3 +1488,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 85400
+=======
+  Length: 1260
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
