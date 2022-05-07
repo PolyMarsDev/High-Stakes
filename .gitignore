@@ -86,4 +86,4 @@ crashlytics-build.properties
                     
 # If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
 # Log files can be ignored.
-/High-Stakes-Music/fmod_editor.log
+**/fmod_editor.log
