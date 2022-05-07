@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UI;
+using Utils;
 
 public class GameMaster : MonoBehaviour {
 	public static GameMaster Instance;
@@ -37,6 +38,9 @@ public class GameMaster : MonoBehaviour {
 
 	[Header("Level Music")]
 	public GameObject LevelMusic;
+
+	[Header("Scene References")]
+	[SerializeField] SceneReference GameOverScene;
 
 	void Awake() {
 		player = FindObjectOfType<Player>();
@@ -78,7 +82,7 @@ public class GameMaster : MonoBehaviour {
 		Destroy(LevelMusic);
 		GameObject.Instantiate(GameOver, CustomGrid.Instance.Door.transform.position, Quaternion.identity);
 		yield return new WaitForSeconds(6f);
-		SceneManager_.Instance.LoadScene(4);
+		SceneManager_.Instance.LoadScene(GameOverScene.sceneIndex);
 	}
 
 	public bool WinConditionSatisfied() => Keys == KeysRequired && CustomGrid.Instance.Door && CustomGrid.Instance.Player 
