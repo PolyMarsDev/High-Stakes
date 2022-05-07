@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Peasant : Enemy {
 	public bool movesVertically;
+	public Direction Dir;
 
-	bool IsRightDir(Vector2Int dir) => dir != Vector2Int.zero && 
-		(dir.x == 0 && movesVertically) || (0 == dir.y && !movesVertically);
+	bool IsRightDir(Vector2Int dir) {
+		if (dir == Vector2Int.zero) return false;
+		Vector2 dirNormalized = ((Vector2) dir).normalized;
+		return dirNormalized == Dir.GetRealDir();
+		// return  dir != Vector2Int.zero && 
+		// (dir.x == 0 && movesVertically) || (0 == dir.y && !movesVertically);
+	}
 	Vector2Int GetDelta(Vector2Int dir) =>
 		dir / Mathf.Abs(dir.x + dir.y);
 

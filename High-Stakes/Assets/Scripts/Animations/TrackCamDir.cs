@@ -9,6 +9,7 @@ public class TrackCamDir : MonoBehaviour {
 	static float turningLambda = 2f;
 	float currentAngle;
 	int front => Mathf.RoundToInt(currentAngle / 90f);
+	public bool beRotating = true;
 
 	void Awake() {
 		Anim = GetComponent<Animator>();
@@ -40,8 +41,10 @@ public class TrackCamDir : MonoBehaviour {
 	public void ReleaseRotation() => overriden = false;
 
 	void LateUpdate() {
-		if (overriden) 	currentAngle = Calc.Damp(currentAngle, destinationRot, turningLambda, Time.deltaTime);
-		else 			currentAngle = Calc.Damp(currentAngle, CameraProvider.Value.rotationAngle * 90f, turningLambda, Time.deltaTime);
+		if (beRotating) {
+			if (overriden) 	currentAngle = Calc.Damp(currentAngle, destinationRot, turningLambda, Time.deltaTime);
+			else 			currentAngle = Calc.Damp(currentAngle, CameraProvider.Value.rotationAngle * 90f, turningLambda, Time.deltaTime);
+		}
 		Anim.SetFloat("CameraDir",  wrapAngle);
 	}
 }

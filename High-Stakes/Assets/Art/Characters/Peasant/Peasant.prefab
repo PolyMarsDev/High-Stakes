@@ -113,6 +113,7 @@ MonoBehaviour:
         m_CallState: 2
   Corpse: {fileID: 7152767926175607981, guid: 621754b071f508a45b934d3b8051173a, type: 3}
   movesVertically: 1
+  Dir: 0
 --- !u!95 &804924477
 Animator:
   serializedVersion: 4
@@ -148,6 +149,7 @@ MonoBehaviour:
   CameraProvider:
     enabled: 0
     value: {fileID: 0}
+  beRotating: 0
 --- !u!114 &-6748828651886533479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,3 +367,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e36a625181141f68b67c2c3cb23b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  childrenMoveForward: 1

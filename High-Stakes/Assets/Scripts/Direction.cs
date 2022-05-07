@@ -29,4 +29,7 @@ static class DirectionExtension {
 		if (direction == Direction.DOWN) return "DOWN";
 		return "WHAT";
 	}
+	public static Vector2Int GetRealDir(this Direction direction) {
+		return new Vector2Int(dx[(int) direction], dy[(int) direction]);
+	}
 }
