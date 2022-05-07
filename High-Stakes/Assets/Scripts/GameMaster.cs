@@ -33,6 +33,10 @@ public class GameMaster : MonoBehaviour {
 
 	[Header("Prefabs References")]
 	public GameObject LevelClear;
+	public GameObject GameOver;
+
+	[Header("Level Music")]
+	public GameObject LevelMusic;
 
 	void Awake() {
 		player = FindObjectOfType<Player>();
@@ -64,13 +68,16 @@ public class GameMaster : MonoBehaviour {
     }
 
 	public IEnumerator OnWin() {
+		Destroy(LevelMusic);
 		GameObject.Instantiate(LevelClear, player.transform.position, Quaternion.identity);
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(6f);
 		SceneManager_.Instance.LoadScene(SceneManager_.Instance.GetActiveScene() + 1);
 	}
 
 	public IEnumerator OnLose() {
-		yield return new WaitForSeconds(3f);
+		Destroy(LevelMusic);
+		GameObject.Instantiate(GameOver, player.transform.position, Quaternion.identity);
+		yield return new WaitForSeconds(6f);
 		SceneManager_.Instance.LoadScene(4);
 	}
 
