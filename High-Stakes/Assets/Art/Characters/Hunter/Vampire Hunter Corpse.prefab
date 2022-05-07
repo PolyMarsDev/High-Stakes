@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4882817237773999842}
   - component: {fileID: 4882817237773999843}
   - component: {fileID: 4882817237773999840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vampire Hunter Corpse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
