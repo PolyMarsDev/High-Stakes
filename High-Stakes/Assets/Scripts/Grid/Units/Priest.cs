@@ -7,7 +7,6 @@ public class Priest : Enemy {
 		if (!Grid.Player) return false;
 
 		Vector2Int displacement = Grid.Player.pos - pos;
-		Debug.Log(displacement);
 		return (displacement.x == displacement.y || displacement.x == -displacement.y) && displacement.x == 1;
 	}
 
