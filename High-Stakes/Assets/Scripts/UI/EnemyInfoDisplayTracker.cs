@@ -38,12 +38,18 @@ namespace UI {
 					}
 					currentlyTracking = enemy;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				} else ClearTrackers();
 =======
+=======
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 				} else {
 					ClearTrackers();
 					currentlyTracking = null;
 				}
+<<<<<<< HEAD
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
+=======
 >>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 			} 
 		}
@@ -58,8 +64,13 @@ namespace UI {
 			foreach (var pos in enemy.GetAttackablePositions()) {
 				UITrackingObjects.Add(
 <<<<<<< HEAD
+<<<<<<< HEAD
 					GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
 					- Vector3.forward * .2f) // this is neccessary to prevent z-fighting
+=======
+					GridUI.Instance.AddIndicator(GridUI.Indicator.ATTACKABLE, GridUI.GridToUI(pos)
+					- Vector3.forward * .3f) // this is neccessary to prevent z-fighting
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 =======
 					GridUI.Instance.AddIndicator(GridUI.Indicator.ATTACKABLE, GridUI.GridToUI(pos)
 					- Vector3.forward * .3f) // this is neccessary to prevent z-fighting
@@ -69,7 +80,11 @@ namespace UI {
 			foreach (var pos in enemy.GetVisionPositions()) {
 				UITrackingObjects.Add(
 <<<<<<< HEAD
+<<<<<<< HEAD
 					GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
+=======
+					GridUI.Instance.AddIndicator(GridUI.Indicator.VISIBLE, GridUI.GridToUI(pos)
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 =======
 					GridUI.Instance.AddIndicator(GridUI.Indicator.VISIBLE, GridUI.GridToUI(pos)
 >>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709

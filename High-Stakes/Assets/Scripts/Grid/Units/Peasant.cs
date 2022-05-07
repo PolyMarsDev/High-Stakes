@@ -62,7 +62,11 @@ public class Peasant : Enemy {
 				while (CustomGrid.Instance.ValidSquare(cur)) {
 					cur += dir;
 <<<<<<< HEAD
+<<<<<<< HEAD
 					if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(dir);
+=======
+					if (CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
+>>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 =======
 					if (CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
 >>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
