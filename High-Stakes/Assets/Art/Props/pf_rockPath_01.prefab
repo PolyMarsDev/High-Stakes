@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 6
   m_Name: pf_rockPath_01
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,8 +44,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.112
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3a5191c352e8c54f9743988e7edd94c, type: 3}
       propertyPath: m_LocalRotation.w
