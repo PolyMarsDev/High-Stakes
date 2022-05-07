@@ -102,6 +102,8 @@ GameObject:
   - component: {fileID: 120277668904774836}
   - component: {fileID: 120277668904774837}
   - component: {fileID: 120277668904774838}
+  - component: {fileID: 7648936182125866342}
+  - component: {fileID: 1716229737488879579}
   m_Layer: 0
   m_Name: Turn Based UI Canvas [World]
   m_TagString: Untagged
@@ -206,4 +208,26 @@ MonoBehaviour:
   WorldCanvas:
     enabled: 0
     value: {fileID: 0}
-  MoveableIndicatorPrefab: {fileID: 8637150949237531747, guid: 892447ef8f66d474088e5441a69f6bfc, type: 3}
+  MoveableIndicatorPrefab: {fileID: 8637150949237531747, guid: 692d67f7fdc132b499d1a82be130a534, type: 3}
+  AttackableIndicatorPrefab: {fileID: 8637150949237531747, guid: 892447ef8f66d474088e5441a69f6bfc, type: 3}
+  VisibleIndicatorPrefab: {fileID: 8637150949237531747, guid: e1d61e7384482c544b7d3a9af60f4f73, type: 3}
+--- !u!222 &7648936182125866342
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120277668904774835}
+  m_CullTransparentMesh: 1
+--- !u!114 &1716229737488879579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120277668904774835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a78ce0a40c8f24497fc6db417c638c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

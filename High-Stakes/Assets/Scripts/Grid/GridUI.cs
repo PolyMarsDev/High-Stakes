@@ -45,9 +45,13 @@ public class GridUI : MonoBehaviour
 	}
 
 	public enum Indicator {
-		MOVABLE
+		MOVABLE,
+		ATTACKABLE,
+		VISIBLE
 	}
 	public GameObject MoveableIndicatorPrefab;
+	public GameObject AttackableIndicatorPrefab;
+	public GameObject VisibleIndicatorPrefab;
 }
 
 public static class IndicatorExtension {
@@ -55,6 +59,10 @@ public static class IndicatorExtension {
 		switch (ind) {
 			case GridUI.Indicator.MOVABLE:
 				return UI.MoveableIndicatorPrefab;
+			case GridUI.Indicator.ATTACKABLE:
+				return UI.AttackableIndicatorPrefab;
+			case GridUI.Indicator.VISIBLE:
+				return UI.VisibleIndicatorPrefab;
 		}
 		return null;
 	}

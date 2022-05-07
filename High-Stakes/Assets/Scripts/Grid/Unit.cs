@@ -10,8 +10,6 @@ public abstract class Unit : MonoBehaviour {
 
 	protected CustomGrid Grid => CustomGrid.Instance;
 
-	
-
 	void OnEnable() {
 		if (CustomGrid.Instance != null)
 			pos = CustomGrid.Instance.SnapCoordinate(transform.position);
@@ -43,4 +41,6 @@ public abstract class Unit : MonoBehaviour {
 	}
 
 	public virtual void Kill() => Destroy(gameObject);
+
+	
 }
