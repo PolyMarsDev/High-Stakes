@@ -37,14 +37,7 @@ namespace UI {
 						GetNewTrackers(enemy);
 					}
 					currentlyTracking = enemy;
-<<<<<<< HEAD
 				} else ClearTrackers();
-=======
-				} else {
-					ClearTrackers();
-					currentlyTracking = null;
-				}
->>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 			} 
 		}
 
@@ -57,22 +50,13 @@ namespace UI {
 		public void GetNewTrackers(Enemy enemy) {
 			foreach (var pos in enemy.GetAttackablePositions()) {
 				UITrackingObjects.Add(
-<<<<<<< HEAD
 					GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
 					- Vector3.forward * .2f) // this is neccessary to prevent z-fighting
-=======
-					GridUI.Instance.AddIndicator(GridUI.Indicator.ATTACKABLE, GridUI.GridToUI(pos)
-					- Vector3.forward * .3f) // this is neccessary to prevent z-fighting
->>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 				);
 			}
 			foreach (var pos in enemy.GetVisionPositions()) {
 				UITrackingObjects.Add(
-<<<<<<< HEAD
 					GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
-=======
-					GridUI.Instance.AddIndicator(GridUI.Indicator.VISIBLE, GridUI.GridToUI(pos)
->>>>>>> e6c98e3773fe035ae478a3b940fa4c04f7ca4709
 					- Vector3.forward * .2f) // this is neccessary to prevent z-fighting
 				);
 			}
