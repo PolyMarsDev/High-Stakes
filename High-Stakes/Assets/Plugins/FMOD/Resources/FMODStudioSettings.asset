@@ -347,7 +347,7 @@ MonoBehaviour:
   sourceProjectPath: ../High-Stakes-Music/FMOD/FMOD.fspro
   sourceBankPath: ../High-Stakes-Music/FMOD
   SourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
   active: 1
   Properties:
     LiveUpdate:
-      Value: 0
+      Value: 1
       HasValue: 1
     LiveUpdatePort:
       Value: 0

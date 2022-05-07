@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{b386fbc9-ca1a-4824-a93a-203f1cea59f4}" />
 	<object class="GroupTrack" id="{cab143ac-1ace-4d1f-bb08-1481ac419914}">
 		<relationship name="modules">
-			<destination>{b0eb9ee9-a8a0-4ce2-b702-45091fdf113a}</destination>
+			<destination>{d0d8a98a-88ab-41e6-8717-e139c5c1477a}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{bdc4f519-d694-4bfe-9221-2311489b4bcd}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{32cb0a25-6853-4c06-95b4-dc92c346e0ea}">
 		<relationship name="modules">
-			<destination>{b0eb9ee9-a8a0-4ce2-b702-45091fdf113a}</destination>
+			<destination>{d0d8a98a-88ab-41e6-8717-e139c5c1477a}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{2d536f7e-fb6f-488d-8bc4-311f67b22f43}</destination>
@@ -91,17 +91,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{58e4f103-1b3b-4760-b64c-e1a054531d6e}" />
-	<object class="SingleSound" id="{b0eb9ee9-a8a0-4ce2-b702-45091fdf113a}">
+	<object class="SingleSound" id="{d0d8a98a-88ab-41e6-8717-e139c5c1477a}">
 		<property name="length">
-			<value>128.39183673469387</value>
+			<value>62.450000000000003</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{0cd9dacb-24b1-41b1-bb10-20d35944fd84}</destination>
+			<destination>{115d340f-acda-4b22-ba79-ee08e388e3f4}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{bdc4f519-d694-4bfe-9221-2311489b4bcd}">
 		<property name="volume">
-			<value>-10.5</value>
+			<value>-1</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -118,10 +118,10 @@
 	</object>
 	<object class="LoopRegion" id="{2d536f7e-fb6f-488d-8bc4-311f67b22f43}">
 		<property name="position">
-			<value>0</value>
+			<value>9.7799999999999994</value>
 		</property>
 		<property name="length">
-			<value>128.39183673469387</value>
+			<value>52.670000000000002</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{32cb0a25-6853-4c06-95b4-dc92c346e0ea}</destination>

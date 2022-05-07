@@ -81,6 +81,60 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &-2509731026608069454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background
+  m_EditorClassIdentifier: 
+  Path: event:/Background
+  Guid:
+    Data1: 659942247
+    Data2: 1111720919
+    Data3: 517132941
+    Data4: 667518074
+  Banks:
+  - {fileID: 3718739832558623359}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 141000
+--- !u!114 &-1502646760081609412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Peasant/PeasantDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Peasant/PeasantDeath
+  Guid:
+    Data1: 1948103747
+    Data2: 1173118902
+    Data3: 2122446505
+    Data4: -2090851313
+  Banks:
+  - {fileID: 3718739832558623359}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1895
 --- !u!114 &-1289918312155451754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +215,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 151875
+  Length: 85400
 --- !u!114 &-154088352303201364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,10 +231,10 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637869203909076090
+  lastModified: 637875273903725529
   FileSizes:
   - Name: 
-    Value: 1250
+    Value: 1490
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -209,13 +263,73 @@ MonoBehaviour:
   - {fileID: -9109580197341156989}
   - {fileID: -407931233716260360}
   - {fileID: 3575705581801806401}
+  - {fileID: -1502646760081609412}
+  - {fileID: 4816912047809038993}
+  - {fileID: 3532318882387983038}
+  - {fileID: -2509731026608069454}
+  - {fileID: 1842727855410575636}
+  - {fileID: 1645759122452199751}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3718739832558623359}
   StringsBanks:
   - {fileID: -154088352303201364}
-  cacheTime: 637869203909076090
+  cacheTime: 637875273903725529
   cacheVersion: 10
+--- !u!114 &1645759122452199751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LevelClear
+  m_EditorClassIdentifier: 
+  Path: event:/LevelClear
+  Guid:
+    Data1: 677519769
+    Data2: 1250221762
+    Data3: -313608561
+    Data4: 2027088471
+  Banks:
+  - {fileID: 3718739832558623359}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 44000
+--- !u!114 &1842727855410575636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/UI/Transform
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/UI/Transform
+  Guid:
+    Data1: -845946985
+    Data2: 1320015335
+    Data3: -1842324067
+    Data4: 1661421496
+  Banks:
+  - {fileID: 3718739832558623359}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2751
 --- !u!114 &3022548572943360535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +356,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 128391
+  Length: 62450
 --- !u!114 &3074495992225988132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +384,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1500
+--- !u!114 &3532318882387983038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Priest/PriestDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Priest/PriestDeath
+  Guid:
+    Data1: 295390579
+    Data2: 1297613457
+    Data3: -828510053
+    Data4: -1003944070
+  Banks:
+  - {fileID: 3718739832558623359}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1570
 --- !u!114 &3575705581801806401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,9 +453,36 @@ MonoBehaviour:
   Path: ../High-Stakes-Music/FMOD/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637869203909066118
+  lastModified: 637875273903685609
   FileSizes: []
   Exists: 1
+--- !u!114 &4816912047809038993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Vampire/VampireDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Vampire/VampireDeath
+  Guid:
+    Data1: 724060009
+    Data2: 1089647185
+    Data3: 499749298
+    Data4: -2044372410
+  Banks:
+  - {fileID: 3718739832558623359}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
 --- !u!114 &5314063910938100948
 MonoBehaviour:
   m_ObjectHideFlags: 0
