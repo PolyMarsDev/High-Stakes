@@ -48,4 +48,43 @@ public class Peasant : Enemy {
 		}
 		return adjacents;
 	}
+
+	public override List<Vector2Int> GetVisionPositions() {
+		List<Vector2Int> positions = new List<Vector2Int>();
+		
+		int[] dx = {1, -1, 0, 0};
+		int[] dy = {0, 0, -1, 1};
+
+		for (int k = 0; k < 4; k++) {
+			Vector2Int dir = new Vector2Int(dx[k], dy[k]);
+			if (IsRightDir(dir)) {
+				Vector2Int cur = pos;
+				while (CustomGrid.Instance.ValidSquare(cur)) {
+					cur += dir;
+					if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(dir);
+					else break;
+				}
+			}
+		}
+
+		return positions;
+	}
+
+	public override List<Vector2Int> GetAttackablePositions() {
+		List<Vector2Int> positions = new List<Vector2Int>();
+		
+		int[] dx = {1, -1, 0, 0};
+		int[] dy = {0, 0, -1, 1};
+
+		for (int k = 0; k < 4; k++) {
+			Vector2Int dir = new Vector2Int(dx[k], dy[k]);
+			if (IsRightDir(dir)) {
+				Vector2Int cur = pos + dir;
+				if (CustomGrid.Instance.ValidSquare(cur) && CustomGrid.Instance.CanMoveTo(cur)) 
+					positions.Add(cur);
+			}
+		}
+
+		return positions;
+	}
 }
