@@ -69,7 +69,7 @@ public class Priest : Enemy {
 			Vector2Int cur = pos;
 			while (CustomGrid.Instance.ValidSquare(cur)) {
 				cur += dir;
-				if (!CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
+				if (CustomGrid.Instance.CanSeeThrough(cur)) positions.Add(cur);
 				else break;
 			}
 		}
