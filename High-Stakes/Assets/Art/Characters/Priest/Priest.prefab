@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1928032774}
   - component: {fileID: 7745133837629515472}
   - component: {fileID: 5352844383416906533}
+  - component: {fileID: -3339079118781926512}
+  - component: {fileID: 9057362983983841871}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -67,6 +69,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9057362983983841871}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCapture:
     m_PersistentCalls:
       m_Calls:
@@ -84,7 +98,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3339079118781926512}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Corpse: {fileID: 6099168937304252328, guid: e38b6ae2eceea604aaa7ebf115617e33, type: 3}
 --- !u!95 &1928032775
 Animator:
@@ -136,11 +162,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1314120133
-      Data2: 1259112634
-      Data3: -968906063
-      Data4: -507115957
-    Path: event:/Sound Effects/Priest/PriestMove
+      Data1: 574924740
+      Data2: 1263778295
+      Data3: -264153424
+      Data4: 1075233375
+    Path: event:/Sound Effects/Footsteps
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -171,6 +197,66 @@ MonoBehaviour:
       Data3: 1681963692
       Data4: 933692912
     Path: event:/Sound Effects/Priest/PriestAttack
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &-3339079118781926512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709450771226259595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 295390579
+      Data2: 1297613457
+      Data3: -828510053
+      Data4: -1003944070
+    Path: event:/Sound Effects/Priest/PriestDeath
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &9057362983983841871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709450771226259595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1314120133
+      Data2: 1259112634
+      Data3: -968906063
+      Data4: -507115957
+    Path: event:/Sound Effects/Priest/PriestMove
   Event: 
   PlayEvent: 0
   StopEvent: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f14d9ee7-5af1-4cd3-8b70-bc1708386c6d}">
+		<property name="assetPath">
+			<value>peasant-aggro-2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49530612244897959</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2cfb548-48f0-4bb6-b9d9-7a5157642177}</destination>
+		</relationship>
+	</object>
+</objects>

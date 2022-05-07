@@ -781,11 +781,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d7f9618b27292b43af59b3cc30ceaae, type: 3}
   m_PrefabInstance: {fileID: 144931785}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &159532841 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3744185833824199326, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}
-  m_PrefabInstance: {fileID: 157838987146029914}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &163068844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8935,7 +8930,7 @@ PrefabInstance:
     - target: {fileID: 157838987053311637, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}
       propertyPath: GameOver
       value: 
-      objectReference: {fileID: 159532841}
+      objectReference: {fileID: 8689214089048146573, guid: 17ea672a9a691f94a9f9a6c70e15d812, type: 3}
     - target: {fileID: 157838987053311637, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}
       propertyPath: LevelMusic
       value: 
@@ -8943,6 +8938,14 @@ PrefabInstance:
     - target: {fileID: 157838987053311639, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}
       propertyPath: m_Name
       value: Chris
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140620873626268659, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}
+      propertyPath: PlayEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140620873626268659, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}
+      propertyPath: StopEvent
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 288640a88b647fb449c3afe164dd09c7, type: 3}

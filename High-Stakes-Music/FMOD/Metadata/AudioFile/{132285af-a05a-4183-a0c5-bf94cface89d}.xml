@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{132285af-a05a-4183-a0c5-bf94cface89d}">
+		<property name="assetPath">
+			<value>vampire-bite-2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0357142857142856</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2cfb548-48f0-4bb6-b9d9-7a5157642177}</destination>
+		</relationship>
+	</object>
+</objects>
