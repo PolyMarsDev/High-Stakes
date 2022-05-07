@@ -31,6 +31,9 @@ public class GameMaster : MonoBehaviour {
 	[Range(1, 10)]
 	public int CaptureBloodGain = 3;
 
+	[Header("Prefabs References")]
+	public GameObject LevelClear;
+
 	void Awake() {
 		player = FindObjectOfType<Player>();
 		if (!player) throw new System.Exception("GameMaster: There's no player in this scene. What's my purpose then?");
@@ -61,7 +64,8 @@ public class GameMaster : MonoBehaviour {
     }
 
 	public IEnumerator OnWin() {
-		yield return new WaitForSeconds(3f);
+		GameObject.Instantiate(LevelClear, player.transform.position, Quaternion.identity);
+		yield return new WaitForSeconds(5f);
 		SceneManager_.Instance.LoadScene(SceneManager_.Instance.GetActiveScene() + 1);
 	}
 
