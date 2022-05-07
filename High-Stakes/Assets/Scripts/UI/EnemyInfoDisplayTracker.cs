@@ -37,7 +37,10 @@ namespace UI {
 						GetNewTrackers(enemy);
 					}
 					currentlyTracking = enemy;
-				} else ClearTrackers();
+				} else {
+					ClearTrackers();
+					currentlyTracking = null;
+				}
 			} 
 		}
 
@@ -50,13 +53,13 @@ namespace UI {
 		public void GetNewTrackers(Enemy enemy) {
 			foreach (var pos in enemy.GetAttackablePositions()) {
 				UITrackingObjects.Add(
-					GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
-					- Vector3.forward * .2f) // this is neccessary to prevent z-fighting
+					GridUI.Instance.AddIndicator(GridUI.Indicator.ATTACKABLE, GridUI.GridToUI(pos)
+					- Vector3.forward * .3f) // this is neccessary to prevent z-fighting
 				);
 			}
 			foreach (var pos in enemy.GetVisionPositions()) {
 				UITrackingObjects.Add(
-					GridUI.Instance.AddIndicator(GridUI.Indicator.MOVABLE, GridUI.GridToUI(pos)
+					GridUI.Instance.AddIndicator(GridUI.Indicator.VISIBLE, GridUI.GridToUI(pos)
 					- Vector3.forward * .2f) // this is neccessary to prevent z-fighting
 				);
 			}
