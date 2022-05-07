@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{3980b3bf-72ba-4d89-b9f6-1b12aa72d965}">
+		<property name="assetPath">
+			<value>HIGH_STAKES_LEVEL_THEME.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>88</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2cfb548-48f0-4bb6-b9d9-7a5157642177}</destination>
+		</relationship>
+	</object>
+</objects>
