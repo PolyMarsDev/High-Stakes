@@ -19,7 +19,10 @@ public class GameMaster : MonoBehaviour {
 
 	[Range(1, 30)]
 	public int StartingBlood;
-	public int Blood {get; private set; }
+	int _blood = 0;
+	public int Blood {get => _blood; private set {
+		_blood = Mathf.Clamp(value, 0, 100);
+	}}
 
 	[Range(0, 3)]
 	public int KeysRequired;
