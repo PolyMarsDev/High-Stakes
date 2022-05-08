@@ -55,6 +55,7 @@ public class CustomGrid : MonoBehaviour {
 			if (GetUnitAt(nxt) is Enemy && EnemyBlock) return false;
 			if (GetUnitAt(nxt) is Player && PlayerBlock) return false;
 			if (!CanSeeThrough(nxt)) return false;
+			if (GetUnitAt(nxt)) Debug.Log(GetUnitAt(nxt));
 		}
 
 		return true;
@@ -75,9 +76,9 @@ public class CustomGrid : MonoBehaviour {
 		return movAvailable && CanMoveTo(pos);
 	}
 
-	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && !HasUnitAt(x, y) 
-		|| (GetUnitAt(x,y) is Obstacle) && (GetUnitAt(x,y) as Obstacle).IsTransparent
-		|| (GetUnitAt(x,y) is Player); // TODO: Change after implementing obstacles;
+	public bool CanSeeThrough(int x, int y) => ValidSquare(x, y) && (!HasUnitAt(x, y) 
+		|| (GetUnitAt(x,y) is Obstacle && (GetUnitAt(x,y) as Obstacle).IsTransparent)
+		|| (GetUnitAt(x,y) is Player)); // TODO: Change after implementing obstacles;
 	public bool CanSeeThrough(Vector2Int pos) => CanSeeThrough(pos.x, pos.y);
 
 	public bool HasUnitAt(int x, int y) => ValidSquare(x, y) ? units[x,y] : false;
