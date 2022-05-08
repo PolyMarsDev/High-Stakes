@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: lantern_mat
+  m_Name: lanternGlow_mat
   m_Shader: {fileID: -6465566751694194690, guid: 2f31c2487e66342d4bd02010c2bbf0fc, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -46,14 +46,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2ec383a24afd49f78ab6d683d95d03a4: 0.1
-    - Vector1_31badfa2f2494f13aff08b4daa9763c2: 0.3
-    - Vector1_43257789a71e44a490928ec34b6b3066: 4
-    - Vector1_61d549c5cfda4caf869442843b4904b9: 0
-    - _Power: 1.22
+    - Vector1_2ec383a24afd49f78ab6d683d95d03a4: 10
+    - Vector1_31badfa2f2494f13aff08b4daa9763c2: 0.2
+    - Vector1_43257789a71e44a490928ec34b6b3066: 1.5
+    - Vector1_61d549c5cfda4caf869442843b4904b9: -1
+    - _Power: 0.18
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_796fe05f9a4946b19ad3ef1d62d86ca7: {r: 1.4980392, g: 0.32156864, b: 0, a: 0}
-    - Vector2_18dbb32e20f5447cad0bd48524f87547: {r: 1, g: 0, b: 0, a: 0}
+    - Color_796fe05f9a4946b19ad3ef1d62d86ca7: {r: 1.4980392, g: 0.08975732, b: 0, a: 0}
+    - Vector2_18dbb32e20f5447cad0bd48524f87547: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
