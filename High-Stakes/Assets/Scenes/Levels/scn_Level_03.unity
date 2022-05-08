@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44581473, g: 0.4955384, b: 0.57432115, a: 1}
+  m_IndirectSpecularColor: {r: 0.44581497, g: 0.49553877, b: 0.5743217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8441,7 +8441,7 @@ MonoBehaviour:
   groundGrid: {fileID: 694102294}
   leftWall: {fileID: 1900196501}
   botWall: {fileID: 615387868}
-  Size: {x: 8, y: 8}
+  Size: {x: 6, y: 6}
   YplaneOffset: 0
 --- !u!156049354 &1299044493
 Grid:
@@ -8711,7 +8711,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7785467, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
