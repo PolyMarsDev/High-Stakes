@@ -5,9 +5,15 @@ using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.Events;
+using NaughtyAttributes;
+using Effects;
 
 [RequireComponent(typeof(Animator))]
 public class Player : LiveUnit {
+
+	[Header("Particle Combos")]
+	[HorizontalLine(color: EColor.Red)]
+	[SerializeField] ParticleCombo DashCombo;
 
 	public override List<Vector2Int> GetMoveTo() {
 		int[] dx = {1, -1, 0, 0};
@@ -34,5 +40,21 @@ public class Player : LiveUnit {
 			if (CustomGrid.Instance.CanMoveTo(nxtPos)) adjacents.Add(nxtPos);
 		}
 		return adjacents;
+	}
+
+	public override IEnumerator Capture(Unit unit) {
+		Vector2Int dist = unit.pos - this.pos;
+		bool dashing = (Mathf.Abs(dist.x) > 1 || Mathf.Abs(dist.y) > 1);
+		if (dashing) DashCombo.Activate();
+		yield return base.Capture(unit);
+		if (dashing) DashCombo.Stop();
+	}
+
+	public override IEnumerator MoveTo(Vector2Int pos) {
+		Vector2Int dist = pos - this.pos;
+		bool dashing = (Mathf.Abs(dist.x) > 1 || Mathf.Abs(dist.y) > 1);
+		if (dashing) DashCombo.Activate();
+		yield return base.MoveTo(pos);
+		if (dashing) DashCombo.Stop();
 	}
 }
