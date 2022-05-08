@@ -15,7 +15,7 @@ public class VampireHunter : Enemy {
 	public override bool CanAttackPlayer() {
 		if (!Grid.Player) return false;
 		Vector2Int displacement = Grid.Player.pos - pos;
-		return Mathf.Max(
+		return CanSeePlayer() && Mathf.Max(
 			Mathf.Abs(displacement.x),
 			Mathf.Abs(displacement.y)
 		) == 1;

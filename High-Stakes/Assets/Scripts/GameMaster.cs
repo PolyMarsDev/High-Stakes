@@ -77,14 +77,14 @@ public class GameMaster : MonoBehaviour {
 	public IEnumerator OnWin() {
 		Destroy(LevelMusic);
 		GameObject.Instantiate(LevelClear, CustomGrid.Instance.Door.transform.position, Quaternion.identity);
-		yield return new WaitForSeconds(6f);
+		yield return new WaitForSeconds(2f);
 		SceneManager_.Instance.LoadScene(SceneManager_.Instance.GetActiveScene() + 1);
 	}
 
 	public IEnumerator OnLose() {
 		Destroy(LevelMusic);
 		GameObject.Instantiate(GameOver, CustomGrid.Instance.Door.transform.position, Quaternion.identity);
-		yield return new WaitForSeconds(6f);
+		yield return new WaitForSeconds(2f);
 		SceneManager_.Instance.LoadScene(GameOverScene.sceneIndex);
 	}
 

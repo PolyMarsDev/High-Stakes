@@ -374,3 +374,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childrenMoveForward: 1
+  selfMoveForward: 0

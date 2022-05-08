@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44581473, g: 0.4955384, b: 0.57432115, a: 1}
+  m_IndirectSpecularColor: {r: 0.44581497, g: 0.49553877, b: 0.5743217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2281,7 +2281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710784
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2289,7 +2289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.70710576
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2301,7 +2301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2966,17 +2966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdf6c616326c4aaeb610b335fbb67fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundColor:
-    serializedVersion: 2
-    rgba: 4281874488
-  font: {fileID: 0}
-  textColor:
-    serializedVersion: 2
-    rgba: 4284045763
-  fontSize: 12
-  fontStyle: 1
-  alignment: 4
-  textDropShadow: 1
 --- !u!4 &419504936
 Transform:
   m_ObjectHideFlags: 0
@@ -7633,17 +7622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdf6c616326c4aaeb610b335fbb67fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundColor:
-    serializedVersion: 2
-    rgba: 4281874488
-  font: {fileID: 0}
-  textColor:
-    serializedVersion: 2
-    rgba: 4284053407
-  fontSize: 12
-  fontStyle: 1
-  alignment: 4
-  textDropShadow: 1
 --- !u!4 &1070557129
 Transform:
   m_ObjectHideFlags: 0
@@ -7955,6 +7933,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1611048934}
     m_Modifications:
     - target: {fileID: 8609857030548801114, guid: 3a6b721f864873140b490bca3e804205, type: 3}
+      propertyPath: Dir
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609857030548801114, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: movesVertically
       value: 0
       objectReference: {fileID: 0}
@@ -7980,7 +7962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710784
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7988,7 +7970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.70710576
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalRotation.z
@@ -8000,7 +7982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8609857030548801117, guid: 3a6b721f864873140b490bca3e804205, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -8202,6 +8184,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7327218013355720417, guid: 4644daac149c24845a16ebafbdd32c67, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327218013355720422, guid: 4644daac149c24845a16ebafbdd32c67, type: 3}
+      propertyPath: selfMoveForward
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9204,7 +9190,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7780645, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11225,17 +11211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdf6c616326c4aaeb610b335fbb67fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundColor:
-    serializedVersion: 2
-    rgba: 4281874488
-  font: {fileID: 0}
-  textColor:
-    serializedVersion: 2
-    rgba: 4284063590
-  fontSize: 12
-  fontStyle: 1
-  alignment: 4
-  textDropShadow: 1
 --- !u!4 &1611048934
 Transform:
   m_ObjectHideFlags: 0
