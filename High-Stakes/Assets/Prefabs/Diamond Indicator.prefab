@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childrenMoveForward: 1
-  selfMoveForward: 1
+  selfMoveForward: 0
 --- !u!114 &7327218013355720423
 MonoBehaviour:
   m_ObjectHideFlags: 0
